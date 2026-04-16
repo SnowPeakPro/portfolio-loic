@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar cyber sobre</title>
+  <desc id="desc">Avatar stylisé bleu sombre pour portfolio professionnel.</desc>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#163254" />
+      <stop offset="100%" stop-color="#2fc9ff" />
+    </linearGradient>
+  </defs>
+  <rect width="220" height="220" rx="30" fill="#0a1324"/>
+  <circle cx="110" cy="80" r="38" fill="url(#g1)"/>
+  <path d="M52 180c8-31 30-50 58-50s50 19 58 50" fill="none" stroke="#79ddff" stroke-width="14" stroke-linecap="round"/>
+  <rect x="24" y="24" width="172" height="172" rx="24" fill="none" stroke="#39c7ff" stroke-opacity="0.5"/>
+</svg>
