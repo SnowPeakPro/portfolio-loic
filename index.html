@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loïc Vidal-Ferrasse | Portfolio</title>
+    <title>Loïc VIDAL-FERRASSE | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio de Loïc Vidal-Ferrasse, étudiant BUT Réseaux & Télécommunications orienté réseaux, systèmes et cybersécurité."
+      content="Portfolio de Loïc VIDAL-FERRASSE, étudiant BUT Réseaux & Télécommunications à l'IUT de Béziers."
     />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="style.css" />
@@ -18,12 +18,7 @@
       <div class="container nav-wrap">
         <a href="#hero" class="brand" aria-label="Accueil portfolio">LVF</a>
 
-        <button
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="main-nav"
-          aria-label="Ouvrir le menu"
-        >
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
           <span></span><span></span><span></span>
         </button>
 
@@ -32,8 +27,8 @@
           <a data-i18n="nav_about" href="#about">À propos</a>
           <a data-i18n="nav_skills" href="#skills">Compétences</a>
           <a data-i18n="nav_projects" href="#projects">Projets</a>
-          <a data-i18n="nav_experience" href="#experience">Expériences</a>
-          <a data-i18n="nav_education" href="#education">Formations</a>
+          <a data-i18n="nav_experience" href="#experience">Expérience</a>
+          <a data-i18n="nav_education" href="#education">Formation</a>
           <a data-i18n="nav_certs" href="#certifications">Certifications</a>
           <a data-i18n="nav_cyber" href="#cyber">Cyber</a>
           <a data-i18n="nav_contact" href="#contact">Contact</a>
@@ -48,25 +43,23 @@
         <div class="container hero-grid">
           <div>
             <p class="eyebrow" data-i18n="hero_eyebrow">Portfolio professionnel</p>
-            <h1 data-i18n="hero_name">Loïc Vidal-Ferrasse</h1>
-            <h2 class="hero-title" data-i18n="hero_title">
-              Étudiant BUT Réseaux & Télécommunications
-            </h2>
+            <h1 data-i18n="hero_name">Loïc VIDAL-FERRASSE</h1>
+            <h2 class="hero-title" data-i18n="hero_title">Étudiant BUT Réseaux & Télécommunications</h2>
             <p class="hero-intro" data-i18n="hero_intro">
-              Je construis des projets concrets en réseaux, administration système et cybersécurité pour développer un profil technique fiable, structuré et orienté terrain.
+              Étudiant de 20 ans en 2e année de BUT R&T à l'IUT de Béziers, en alternance chez Xefi comme Technicien conseil.
             </p>
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Voir mes projets</a>
+              <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Voir les projets</a>
               <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">Me contacter</a>
             </div>
           </div>
 
           <aside class="hero-card" aria-label="Résumé de profil">
-            <img src="assets/avatar.svg" alt="Avatar stylisé de Loïc Vidal-Ferrasse" class="avatar" />
+            <img src="assets/avatar.svg" alt="Avatar stylisé de Loïc VIDAL-FERRASSE" class="avatar" />
             <ul>
-              <li data-i18n="hero_point_1">Orientation réseau, système et cyber</li>
-              <li data-i18n="hero_point_2">Approche pragmatique et documentée</li>
-              <li data-i18n="hero_point_3">Recherche d'opportunités en alternance/stage</li>
+              <li data-i18n="hero_point_1">BUT R&T - IUT de Béziers (2024-2027)</li>
+              <li data-i18n="hero_point_2">Alternance Xefi (2025-2027)</li>
+              <li data-i18n="hero_point_3">Objectif : cybersécurité et réseaux</li>
             </ul>
           </aside>
         </div>
@@ -75,12 +68,9 @@
       <section id="about" class="section reveal">
         <div class="container narrow">
           <h2 data-i18n="about_title">À propos</h2>
-          <p data-i18n="about_text_1">
-            Je suis étudiant en BUT Réseaux & Télécommunications avec une forte appétence pour les environnements techniques où fiabilité, sécurité et méthode sont essentielles.
-          </p>
-          <p data-i18n="about_text_2">
-            Ce portfolio me permet de centraliser mes projets, suivre ma progression et présenter un aperçu clair de mes compétences à de futurs employeurs.
-          </p>
+          <p data-i18n="about_text_1">Je m'appelle Loïc VIDAL-FERRASSE. Mon parcours associe formation académique et expérience en alternance.</p>
+          <p data-i18n="about_text_2">Je développe progressivement mes compétences en réseaux, administration système et cybersécurité.</p>
+          <p data-i18n="about_text_3">Ce portfolio sert de base durable pour documenter mes projets et ma progression professionnelle.</p>
         </div>
       </section>
 
@@ -95,34 +85,30 @@
         <div class="container">
           <div class="section-head">
             <h2 data-i18n="projects_title">Projets</h2>
-            <p data-i18n="projects_subtitle">Recherche, filtres et détail complet de chaque réalisation.</p>
+            <p data-i18n="projects_subtitle">Une base claire est en place pour publier mes projets détaillés progressivement.</p>
           </div>
-
           <div class="project-controls">
             <label class="sr-only" for="project-search" data-i18n="projects_search_label">Rechercher un projet</label>
             <input id="project-search" type="search" placeholder="Rechercher un projet..." data-i18n-placeholder="projects_search_placeholder" />
             <div id="project-filters" class="filters" role="group" aria-label="Filtres catégories"></div>
           </div>
-
           <div id="projects-grid" class="card-grid"></div>
         </div>
       </section>
 
       <section id="experience" class="section reveal">
         <div class="container">
-          <h2 data-i18n="exp_title">Expériences professionnelles</h2>
+          <h2 data-i18n="exp_title">Expérience professionnelle</h2>
           <div class="timeline" id="experience-timeline"></div>
         </div>
       </section>
 
       <section id="education" class="section reveal">
         <div class="container narrow">
-          <h2 data-i18n="education_title">Formations</h2>
+          <h2 data-i18n="education_title">Formation</h2>
           <article class="glass-card">
             <h3 data-i18n="education_item_title">BUT Réseaux & Télécommunications</h3>
-            <p data-i18n="education_item_text">
-              Formation orientée infrastructures réseau, administration système, cybersécurité opérationnelle et gestion de projets techniques.
-            </p>
+            <p data-i18n="education_item_text">IUT de Béziers • 2024-2027 • Deuxième année • Spécialité Cybersécurité.</p>
           </article>
         </div>
       </section>
@@ -131,31 +117,27 @@
         <div class="container narrow">
           <h2 data-i18n="certs_title">Certifications</h2>
           <article class="glass-card dashed">
-            <p data-i18n="certs_text">
-              Cette section accueillera mes futures certifications en réseau, systèmes et cybersécurité.
-            </p>
+            <p data-i18n="certs_text">Aucune certification pour le moment. Cette section sera enrichie au fil du parcours.</p>
           </article>
         </div>
       </section>
 
       <section id="cyber" class="section reveal">
         <div class="container">
-          <h2 data-i18n="cyber_title">Axe Cybersécurité</h2>
-          <p class="section-intro" data-i18n="cyber_intro">
-            La cybersécurité constitue un axe majeur de spécialisation, avec une approche progressive entre technique, documentation et veille continue.
-          </p>
+          <h2 data-i18n="cyber_title">Axe cybersécurité</h2>
+          <p class="section-intro" data-i18n="cyber_intro">La cybersécurité est l'axe principal de spécialisation, avec une montée en compétence progressive et structurée.</p>
           <div class="card-grid">
             <article class="glass-card">
-              <h3 data-i18n="cyber_block_1_title">Notes techniques</h3>
-              <p data-i18n="cyber_block_1_text">Rédaction de procédures, checklists sécurité et retours d'expérience sur les configurations réseau et système.</p>
+              <h3 data-i18n="cyber_block_1_title">Futurs objectifs cyber</h3>
+              <p data-i18n="cyber_block_1_text">Approfondir la sécurisation d'infrastructures réseau et système en contexte professionnel.</p>
             </article>
             <article class="glass-card">
-              <h3 data-i18n="cyber_block_2_title">Laboratoires / tests</h3>
-              <p data-i18n="cyber_block_2_text">Mise en place d'environnements virtualisés pour tester des scénarios d'attaque/défense de manière contrôlée.</p>
+              <h3 data-i18n="cyber_block_2_title">Outils appris</h3>
+              <p data-i18n="cyber_block_2_text">Pratique progressive d'outils d'administration, de sécurité, de diagnostic et d'automatisation.</p>
             </article>
             <article class="glass-card">
-              <h3 data-i18n="cyber_block_3_title">Veille cyber</h3>
-              <p data-i18n="cyber_block_3_text">Suivi régulier des vulnérabilités, bonnes pratiques, et tendances SOC pour garder une vision opérationnelle à jour.</p>
+              <h3 data-i18n="cyber_block_3_title">Veille</h3>
+              <p data-i18n="cyber_block_3_text">Suivi des vulnérabilités, bonnes pratiques et actualités techniques pour rester à jour.</p>
             </article>
           </div>
         </div>
@@ -165,18 +147,10 @@
         <div class="container">
           <h2 data-i18n="contact_title">Contact</h2>
           <div class="card-grid">
-            <a class="glass-card contact-card" href="mailto:loic.vidal@example.com">
-              <h3>Email</h3>
-              <p>loic.vidal@example.com</p>
-            </a>
-            <a class="glass-card contact-card" href="https://www.linkedin.com/in/loic-vidal-ferrasse" target="_blank" rel="noopener noreferrer">
-              <h3>LinkedIn</h3>
-              <p>/in/loic-vidal-ferrasse</p>
-            </a>
-            <a class="glass-card contact-card" href="https://github.com/loicvf" target="_blank" rel="noopener noreferrer">
-              <h3>GitHub</h3>
-              <p>github.com/loicvf</p>
-            </a>
+            <a class="glass-card contact-card" href="mailto:email@example.com"><h3>Email</h3><p>email@example.com</p></a>
+            <a class="glass-card contact-card" href="https://www.linkedin.com/in/username" target="_blank" rel="noopener noreferrer"><h3>LinkedIn</h3><p>linkedin.com/in/username</p></a>
+            <a class="glass-card contact-card" href="https://github.com/username" target="_blank" rel="noopener noreferrer"><h3>GitHub</h3><p>github.com/username</p></a>
+            <article class="glass-card contact-card"><h3 data-i18n="contact_city">Ville</h3><p>Béziers (placeholder)</p></article>
           </div>
         </div>
       </section>
@@ -184,10 +158,7 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p>
-          <span data-i18n="footer_text">Portfolio de Loïc Vidal-Ferrasse</span>
-          <span id="year"></span>
-        </p>
+        <p><span data-i18n="footer_text">Portfolio de Loïc VIDAL-FERRASSE •</span> <span id="year"></span></p>
         <a href="#hero" data-i18n="footer_top">Retour en haut</a>
       </div>
     </footer>
