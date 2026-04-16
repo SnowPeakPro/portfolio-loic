@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet | Loïc VIDAL-FERRASSE</title>
+    <meta name="description" content="Détail d'un projet du portfolio de Loïc Vidal-Ferrasse." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html#hero" class="brand" aria-label="Retour à l'accueil">LVF</a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
+          <a href="index.html#hero" data-i18n="nav_home">Accueil</a>
+          <a href="index.html#projects" data-i18n="nav_projects">Projets</a>
+          <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <button id="lang-toggle" class="lang-toggle" aria-label="Basculer la langue">EN</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="section reveal">
+      <div class="container">
+        <a href="index.html#projects" class="back-link" data-i18n="project_back">← Retour aux projets</a>
+
+        <article id="project-detail" class="project-detail glass-card"></article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>
+          <span data-i18n="footer_text">Portfolio de Loïc VIDAL-FERRASSE •</span>
+          <span id="year"></span>
+        </p>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">↑</button>
+
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
