@@ -54,6 +54,35 @@ img { max-width: 100%; display: block; }
 .filter-btn { border-radius: 999px; border: 1px solid var(--line); background: rgba(20, 34, 60, 0.75); color: var(--text-soft); padding: 0.4rem 0.74rem; cursor: pointer; }
 .filter-btn.active { color: #011221; background: linear-gradient(120deg, #35c7ff, #75a6ff); }
 .project-card { display: flex; flex-direction: column; gap: 0.65rem; }
+
+.project-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(8, 15, 30, 0.7);
+}
+
+.project-thumb--placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+}
+
+.project-actions {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.project-link-placeholder {
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
 .project-meta { color: var(--accent); font-size: 0.84rem; }
 .project-card .btn { width: fit-content; margin-top: auto; }
 .empty-state { grid-column: 1 / -1; text-align: center; padding: 2rem 1rem; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--text-soft); }
