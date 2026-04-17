@@ -48,7 +48,10 @@ const I18N = {
       "IUT de Béziers • 2024-2027 • Deuxième année • Spécialité Cybersécurité.",
     certs_title: "Certifications",
     certs_text:
-      "Aucune certification pour le moment. Cette section sera enrichie au fil du parcours.",
+      "Les certifications suivantes sont planifiées pour accompagner ma progression.",
+    certs_status_coming: "À venir",
+    certs_status_note:
+      "Certification non encore obtenue, prévue dans la progression du parcours.",
     cyber_title: "Axe cybersécurité",
     cyber_intro:
       "La cybersécurité représente l'axe principal de spécialisation, avec une montée en compétence progressive, documentée et réaliste.",
@@ -63,7 +66,8 @@ const I18N = {
       "Suivi régulier des vulnérabilités, des bonnes pratiques et des actualités techniques.",
     contact_title: "Contact",
     contact_city: "Ville",
-    contact_city_value: "Béziers (placeholder)",
+    contact_city_value: "Narbonne/Béziers",
+    contact_rootme_status: "À compléter",
     footer_text: "Portfolio de Loïc VIDAL-FERRASSE •",
     footer_top: "Retour en haut",
     project_back: "← Retour aux projets",
@@ -79,13 +83,17 @@ const I18N = {
       {
         title: "Xefi — Technicien conseil (alternance)",
         period: "2025 à 2027",
-        text: "Interventions techniques dans un contexte client, avec progression continue sur les environnements système et réseau."
-      },
-      {
-        title: "Missions principales",
-        period: "Contexte opérationnel",
-        text: "Montage et configuration de serveurs, sécurisation via installation/configuration de pare-feu Sophos, dépannage client et suivi des actions réalisées."
+        text: "Dans le cadre de mon alternance, je réalise le montage et la configuration de serveurs, la sécurisation d'environnements clients via l'installation et le paramétrage de pare-feu Sophos, ainsi que le dépannage et le suivi des actions techniques."
       }
+    ],
+    certs_items: [
+      { name: "Google Cybersecurity Certificate", logo: "assets/certifications/google-cybersecurity.svg" },
+      { name: "GRC MASTERY", logo: "assets/certifications/grc-mastery.svg" },
+      { name: "ISC2 CC", logo: "assets/certifications/isc2-cc.svg" },
+      { name: "Fortinet NSE 1-3", logo: "assets/certifications/fortinet-nse-1-3.svg" },
+      { name: "Security Blue Team BTJA", logo: "assets/certifications/security-blue-team-btja.svg" },
+      { name: "Cisco Introduction to Cybersecurity", logo: "assets/certifications/cisco-intro-cybersecurity.svg" },
+      { name: "EC-Council Essential", logo: "assets/certifications/ec-council-essential.svg" }
     ],
     skills_items: [
       {
@@ -179,7 +187,10 @@ const I18N = {
       "IUT of Béziers • 2024-2027 • Second year • Cybersecurity specialization.",
     certs_title: "Certifications",
     certs_text:
-      "No certifications yet. This section will be expanded over time.",
+      "The following certifications are planned to support my progression.",
+    certs_status_coming: "Coming soon",
+    certs_status_note:
+      "Not completed yet, planned as part of my learning roadmap.",
     cyber_title: "Cybersecurity focus",
     cyber_intro:
       "Cybersecurity is my main specialization axis, with progressive, documented, and realistic skill development.",
@@ -194,7 +205,8 @@ const I18N = {
       "Regular follow-up on vulnerabilities, best practices, and technical updates.",
     contact_title: "Contact",
     contact_city: "City",
-    contact_city_value: "Béziers (placeholder)",
+    contact_city_value: "Narbonne/Béziers",
+    contact_rootme_status: "Coming soon",
     footer_text: "Loïc VIDAL-FERRASSE portfolio •",
     footer_top: "Back to top",
     project_back: "← Back to projects",
@@ -210,13 +222,17 @@ const I18N = {
       {
         title: "Xefi — Technical Support Technician (work-study)",
         period: "2025 to 2027",
-        text: "Technical work in client environments, with continuous development on system and network operations."
-      },
-      {
-        title: "Main responsibilities",
-        period: "Operational context",
-        text: "Server assembly and configuration, security deployment through Sophos firewall installation/configuration, customer troubleshooting, and intervention follow-up."
+        text: "In my work-study role, I handle server assembly and configuration, help secure client environments through Sophos firewall deployment and setup, and perform customer troubleshooting with clear intervention follow-up."
       }
+    ],
+    certs_items: [
+      { name: "Google Cybersecurity Certificate", logo: "assets/certifications/google-cybersecurity.svg" },
+      { name: "GRC MASTERY", logo: "assets/certifications/grc-mastery.svg" },
+      { name: "ISC2 CC", logo: "assets/certifications/isc2-cc.svg" },
+      { name: "Fortinet NSE 1-3", logo: "assets/certifications/fortinet-nse-1-3.svg" },
+      { name: "Security Blue Team BTJA", logo: "assets/certifications/security-blue-team-btja.svg" },
+      { name: "Cisco Introduction to Cybersecurity", logo: "assets/certifications/cisco-intro-cybersecurity.svg" },
+      { name: "EC-Council Essential", logo: "assets/certifications/ec-council-essential.svg" }
     ],
     skills_items: [
       {
@@ -339,6 +355,25 @@ function renderExperience() {
         <h3>${item.title}</h3>
         <p><strong>${item.period}</strong></p>
         <p>${item.text}</p>
+      </article>`
+    )
+    .join("");
+}
+
+function renderCertifications() {
+  const container = $("#certifications-grid");
+  if (!container) return;
+
+  container.innerHTML = I18N[currentLang].certs_items
+    .map(
+      (cert) => `
+      <article class="glass-card cert-card">
+        <img class="cert-logo" src="${cert.logo}" alt="${cert.name} logo" loading="lazy" />
+        <div>
+          <h3>${cert.name}</h3>
+          <p class="cert-status">${I18N[currentLang].certs_status_coming}</p>
+          <p class="cert-note">${I18N[currentLang].certs_status_note}</p>
+        </div>
       </article>`
     )
     .join("");
@@ -514,6 +549,7 @@ function setupLanguageToggle() {
     applyTranslations();
     renderSkills();
     renderExperience();
+    renderCertifications();
     renderProjectFilters();
     renderProjects();
     renderProjectDetail();
@@ -547,6 +583,7 @@ function init() {
 
   renderSkills();
   renderExperience();
+  renderCertifications();
   renderProjectFilters();
   renderProjects();
   setupProjectSearch();
