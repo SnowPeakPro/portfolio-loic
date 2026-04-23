@@ -41,6 +41,7 @@ const I18N = {
     projects_no_link: "Lien à venir",
     projects_image_placeholder: "Visuel temporaire",
     projects_empty: "Aucun projet ne correspond à la recherche actuelle.",
+    projects_empty_category: "Aucun projet publié pour la catégorie « {category} » pour le moment.",
     exp_title: "Expérience professionnelle",
     education_title: "Formation",
     education_item_title: "BUT Réseaux & Télécommunications",
@@ -180,6 +181,7 @@ const I18N = {
     projects_no_link: "Link coming soon",
     projects_image_placeholder: "Temporary visual",
     projects_empty: "No project matches the current search.",
+    projects_empty_category: "No published project yet in the \"{category}\" category.",
     exp_title: "Professional experience",
     education_title: "Education",
     education_item_title: "BUT Network & Telecommunications",
@@ -281,7 +283,7 @@ const I18N = {
   }
 };
 
-const PROJECT_CATEGORIES = ["Réseaux", "Cyber", "Système", "Scripts", "Projet", "SAE"];
+const PROJECT_CATEGORIES = ["Réseaux", "Cyber", "Système", "Scripts", "Projet", "SAE", "DNS"];
 
 let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 let selectedCategory = "all";
@@ -421,7 +423,11 @@ function renderProjects() {
   });
 
   if (!filteredProjects.length) {
-    container.innerHTML = `<div class="empty-state">${I18N[currentLang].projects_empty}</div>`;
+    const message =
+      selectedCategory !== "all"
+        ? I18N[currentLang].projects_empty_category.replace("{category}", selectedCategory)
+        : I18N[currentLang].projects_empty;
+    container.innerHTML = `<div class="empty-state">${message}</div>`;
     return;
   }
 

@@ -13,6 +13,36 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; font-family: "Segoe UI", Roboto, system-ui, -apple-system, sans-serif; background: radial-gradient(circle at 85% 20%, rgba(42, 88, 158, 0.2), transparent 35%), radial-gradient(circle at 10% 5%, rgba(38, 166, 255, 0.18), transparent 40%), var(--bg); color: var(--text); line-height: 1.65; }
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 110px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+main, .site-header, .site-footer, .back-to-top { position: relative; z-index: 1; }
+
+body::before {
+  left: 0;
+  background:
+    radial-gradient(circle at 22px 16%, rgba(53, 199, 255, 0.2) 0 5px, transparent 6px),
+    radial-gradient(circle at 64px 38%, rgba(117, 166, 255, 0.16) 0 6px, transparent 7px),
+    radial-gradient(circle at 38px 64%, rgba(53, 199, 255, 0.14) 0 4px, transparent 5px);
+  animation: float-side 15s ease-in-out infinite;
+}
+
+body::after {
+  right: 0;
+  background:
+    radial-gradient(circle at 76px 20%, rgba(53, 199, 255, 0.18) 0 5px, transparent 6px),
+    radial-gradient(circle at 28px 50%, rgba(117, 166, 255, 0.14) 0 6px, transparent 7px),
+    radial-gradient(circle at 68px 74%, rgba(53, 199, 255, 0.12) 0 4px, transparent 5px);
+  animation: float-side 18s ease-in-out infinite reverse;
+}
 .container { width: min(100% - 2rem, var(--max-width)); margin-inline: auto; }
 .narrow { max-width: 760px; }
 .section { padding: 4.8rem 0; }
@@ -129,8 +159,14 @@ img { max-width: 100%; display: block; }
 .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+@keyframes float-side {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
 @media (max-width: 920px) { .hero-grid, .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 760px) {
+  body::before,
+  body::after { display: none; }
   .section { padding: 3.8rem 0; }
   .nav-toggle { display: inline-block; }
   .main-nav { position: absolute; left: 1rem; right: 1rem; top: 76px; background: var(--surface-strong); border: 1px solid var(--line); border-radius: 12px; padding: 0.8rem; display: none; flex-direction: column; }
