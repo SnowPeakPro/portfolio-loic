@@ -12,45 +12,57 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: "Segoe UI", Roboto, system-ui, -apple-system, sans-serif; background: radial-gradient(circle at 85% 20%, rgba(42, 88, 158, 0.2), transparent 35%), radial-gradient(circle at 10% 5%, rgba(38, 166, 255, 0.18), transparent 40%), var(--bg); color: var(--text); line-height: 1.65; }
+body { margin: 0; position: relative; isolation: isolate; overflow-x: hidden; font-family: "Segoe UI", Roboto, system-ui, -apple-system, sans-serif; background: radial-gradient(circle at 85% 20%, rgba(42, 88, 158, 0.2), transparent 35%), radial-gradient(circle at 10% 5%, rgba(38, 166, 255, 0.18), transparent 40%), var(--bg); color: var(--text); line-height: 1.65; }
 main, .site-header, .site-footer, .back-to-top { position: relative; z-index: 1; }
 .side-decor {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: clamp(90px, 12vw, 160px);
+  width: clamp(110px, 13vw, 210px);
   pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
+  z-index: -1;
+  opacity: 0.52;
+  overflow: hidden;
+  contain: layout paint;
 }
 
 .side-decor::before,
 .side-decor::after {
   content: "";
   position: absolute;
-  inset: 7% 18%;
-  border-radius: 999px;
+  pointer-events: none;
 }
 
 .side-decor::before {
+  inset: -12% 22% -12% 18%;
   background:
-    radial-gradient(circle at 40% 12%, rgba(53, 199, 255, 0.24) 0 7px, transparent 8px),
-    radial-gradient(circle at 70% 38%, rgba(117, 166, 255, 0.18) 0 9px, transparent 10px),
-    radial-gradient(circle at 35% 68%, rgba(53, 199, 255, 0.16) 0 6px, transparent 7px),
-    linear-gradient(180deg, rgba(53, 199, 255, 0.24), rgba(53, 199, 255, 0));
-  filter: blur(0.2px);
-  animation: side-float 13s ease-in-out infinite;
+    linear-gradient(180deg, transparent, rgba(53, 199, 255, 0.42), transparent) 34% 0 / 1px 38% no-repeat,
+    linear-gradient(180deg, transparent, rgba(117, 166, 255, 0.24), transparent) 62% 18% / 1px 32% no-repeat,
+    linear-gradient(180deg, transparent, rgba(53, 199, 255, 0.32), transparent) 82% 46% / 1px 28% no-repeat,
+    repeating-linear-gradient(180deg, transparent 0 34px, rgba(53, 199, 255, 0.16) 35px 36px, transparent 37px 72px),
+    linear-gradient(90deg, transparent, rgba(53, 199, 255, 0.12), transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 14%, #000 86%, transparent);
+  animation: side-flow 16s linear infinite;
 }
 
 .side-decor::after {
-  inset: 12% 30%;
-  border: 1px solid rgba(104, 191, 255, 0.24);
-  box-shadow: 0 0 30px rgba(53, 199, 255, 0.14);
-  animation: side-pulse 10s ease-in-out infinite;
+  inset: 10% 10% 12% 26%;
+  border-left: 1px solid rgba(53, 199, 255, 0.24);
+  border-right: 1px solid rgba(117, 166, 255, 0.12);
+  background:
+    linear-gradient(90deg, transparent 0 24%, rgba(53, 199, 255, 0.36) 24% 25%, transparent 25% 100%) 0 14% / 100% 18% no-repeat,
+    linear-gradient(90deg, transparent 0 58%, rgba(117, 166, 255, 0.24) 58% 59%, transparent 59% 100%) 0 52% / 100% 16% no-repeat,
+    linear-gradient(180deg, rgba(53, 199, 255, 0), rgba(53, 199, 255, 0.12), rgba(53, 199, 255, 0));
+  box-shadow: inset 20px 0 36px rgba(53, 199, 255, 0.08), 0 0 44px rgba(53, 199, 255, 0.08);
+  clip-path: polygon(12% 0, 100% 7%, 86% 100%, 0 92%);
+  animation: side-drift 12s ease-in-out infinite;
 }
 
 .side-decor--left { left: 0; }
 .side-decor--right { right: 0; transform: scaleX(-1); }
+.side-decor--right::before { animation-delay: -8s; }
+.side-decor--right::after { animation-delay: -5s; }
 .container { width: min(100% - 2rem, var(--max-width)); margin-inline: auto; }
 .narrow { max-width: 760px; }
 .section { padding: 4.8rem 0; }
@@ -168,16 +180,17 @@ img { max-width: 100%; display: block; }
 .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
-@keyframes side-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(18px); }
+@keyframes side-flow {
+  0% { background-position: 34% -28%, 62% -6%, 82% 24%, 0 0, 0 0; }
+  100% { background-position: 34% 118%, 62% 104%, 82% 132%, 0 72px, 0 0; }
 }
 
-@keyframes side-pulse {
+@keyframes side-drift {
   0%,
-  100% { opacity: 0.45; transform: translateY(0) scale(1); }
-  50% { opacity: 0.8; transform: translateY(-10px) scale(1.04); }
+  100% { opacity: 0.42; transform: translateY(0) skewY(-3deg); }
+  50% { opacity: 0.78; transform: translateY(-18px) skewY(2deg); }
 }
+@media (max-width: 1120px) { .side-decor { width: 84px; opacity: 0.3; } }
 @media (max-width: 920px) { .hero-grid, .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 760px) {
   .side-decor { display: none; }
