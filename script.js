@@ -192,7 +192,7 @@ const I18N = {
     projects_no_link: "Link coming soon",
     projects_image_placeholder: "Temporary visual",
     projects_empty: "No project matches the current search.",
-    projects_empty_category: "No published project yet in the \"{category}\" category.",
+    projects_empty_category: "No project has been published in the “{category}” category yet.",
     exp_title: "Professional experience",
     education_title: "Education",
     education_item_title: "BUT Network & Telecommunications",
@@ -415,6 +415,18 @@ function getCategoryLabel(category) {
   return key ? I18N[currentLang][key] : category;
 }
 
+function hasProjectsForCategory(category) {
+  return PROJECTS.some((project) => project.category === category);
+}
+
+function getEmptyProjectsMessage() {
+  if (selectedCategory !== "all" && !hasProjectsForCategory(selectedCategory)) {
+    return I18N[currentLang].projects_empty_category.replace("{category}", getCategoryLabel(selectedCategory));
+  }
+
+  return I18N[currentLang].projects_empty;
+}
+
 function renderProjectFilters() {
   const container = $("#project-filters");
   if (!container) return;
@@ -449,11 +461,7 @@ function renderProjects() {
   });
 
   if (!filteredProjects.length) {
-    const message =
-      selectedCategory !== "all"
-        ? I18N[currentLang].projects_empty_category.replace("{category}", getCategoryLabel(selectedCategory))
-        : I18N[currentLang].projects_empty;
-    container.innerHTML = `<div class="empty-state">${message}</div>`;
+    container.innerHTML = `<div class="empty-state">${getEmptyProjectsMessage()}</div>`;
     return;
   }
 
