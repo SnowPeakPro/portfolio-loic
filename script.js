@@ -36,6 +36,10 @@ const I18N = {
     projects_search_label: "Rechercher un projet",
     projects_search_placeholder: "Rechercher un projet...",
     projects_filter_all: "Tout",
+    projects_filter_networks: "Réseaux",
+    projects_filter_cyber: "Cyber",
+    projects_filter_dns: "DNS",
+    projects_filter_ai: "IA",
     projects_btn_detail: "Voir le détail",
     projects_btn_link: "Voir le lien",
     projects_no_link: "Lien à venir",
@@ -47,6 +51,9 @@ const I18N = {
     education_item_title: "BUT Réseaux & Télécommunications",
     education_item_text:
       "IUT de Béziers • 2024-2027 • Deuxième année • Spécialité Cybersécurité.",
+    education_item_2_title: "Bac Général",
+    education_item_2_text:
+      "Lycée • 2021-2024 • Spécialités : Maths, NSI, Maths expertes • Mention Bien.",
     certs_title: "Certifications",
     certs_text:
       "Les certifications suivantes sont planifiées pour accompagner ma progression.",
@@ -176,6 +183,10 @@ const I18N = {
     projects_search_label: "Search a project",
     projects_search_placeholder: "Search a project...",
     projects_filter_all: "All",
+    projects_filter_networks: "Networks",
+    projects_filter_cyber: "Cyber",
+    projects_filter_dns: "DNS",
+    projects_filter_ai: "AI",
     projects_btn_detail: "View details",
     projects_btn_link: "Open link",
     projects_no_link: "Link coming soon",
@@ -187,6 +198,9 @@ const I18N = {
     education_item_title: "BUT Network & Telecommunications",
     education_item_text:
       "IUT of Béziers • 2024-2027 • Second year • Cybersecurity specialization.",
+    education_item_2_title: "French General Baccalaureate",
+    education_item_2_text:
+      "High school • 2021-2024 • Majors: Mathematics, Computer Science (NSI), Advanced Mathematics • Honors: Good.",
     certs_title: "Certifications",
     certs_text:
       "The following certifications are planned to support my progression.",
@@ -283,7 +297,14 @@ const I18N = {
   }
 };
 
-const PROJECT_CATEGORIES = ["Réseaux", "Cyber", "Système", "Scripts", "Projet", "SAE", "DNS"];
+const PROJECT_CATEGORIES = ["Réseaux", "Cyber", "DNS", "IA"];
+
+const PROJECT_CATEGORY_LABEL_KEYS = {
+  "Réseaux": "projects_filter_networks",
+  Cyber: "projects_filter_cyber",
+  DNS: "projects_filter_dns",
+  IA: "projects_filter_ai"
+};
 
 let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 let selectedCategory = "all";
@@ -389,6 +410,11 @@ function getProjectShort(project) {
   return currentLang === "fr" ? project.short_fr : project.short_en;
 }
 
+function getCategoryLabel(category) {
+  const key = PROJECT_CATEGORY_LABEL_KEYS[category];
+  return key ? I18N[currentLang][key] : category;
+}
+
 function renderProjectFilters() {
   const container = $("#project-filters");
   if (!container) return;
@@ -396,7 +422,7 @@ function renderProjectFilters() {
   const allLabel = I18N[currentLang].projects_filter_all;
   container.innerHTML = ["all", ...PROJECT_CATEGORIES]
     .map((category) => {
-      const label = category === "all" ? allLabel : category;
+      const label = category === "all" ? allLabel : getCategoryLabel(category);
       const isActive = selectedCategory === category ? "active" : "";
       return `<button class="filter-btn ${isActive}" data-category="${category}" type="button">${label}</button>`;
     })
@@ -425,7 +451,7 @@ function renderProjects() {
   if (!filteredProjects.length) {
     const message =
       selectedCategory !== "all"
-        ? I18N[currentLang].projects_empty_category.replace("{category}", selectedCategory)
+        ? I18N[currentLang].projects_empty_category.replace("{category}", getCategoryLabel(selectedCategory))
         : I18N[currentLang].projects_empty;
     container.innerHTML = `<div class="empty-state">${message}</div>`;
     return;
@@ -436,7 +462,7 @@ function renderProjects() {
       (project) => `
       <article class="glass-card project-card reveal">
         ${createProjectVisual(project)}
-        <p class="project-meta">${project.category}</p>
+        <p class="project-meta">${getCategoryLabel(project.category)}</p>
         <h3>${getProjectTitle(project)}</h3>
         <p>${getProjectShort(project)}</p>
         ${createTagList(project.technologies)}
@@ -473,7 +499,7 @@ function renderProjectDetail() {
 
   container.innerHTML = `
     <h1>${title}</h1>
-    <p class="project-meta">${I18N[currentLang].project_category}: ${project.category}</p>
+    <p class="project-meta">${I18N[currentLang].project_category}: ${getCategoryLabel(project.category)}</p>
     <p>${description}</p>
 
     <h2>${I18N[currentLang].project_technologies}</h2>

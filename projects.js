@@ -3,7 +3,7 @@ const PROJECTS = [
     slug: "sae-reseau-multi-site",
     title_fr: "SAE réseau multi-site",
     title_en: "Multi-site network SAE",
-    category: "SAE",
+    category: "Réseaux",
     short_fr:
       "Projet académique en cours de structuration. La fiche complète sera publiée après validation finale.",
     short_en:
@@ -26,7 +26,7 @@ const PROJECTS = [
     slug: "scripts-powershell-atera",
     title_fr: "Scripts PowerShell Atera",
     title_en: "Atera PowerShell scripts",
-    category: "Scripts",
+    category: "Cyber",
     short_fr:
       "Base d'automatisation en cours de développement pour standardiser les tâches récurrentes.",
     short_en:
@@ -49,7 +49,7 @@ const PROJECTS = [
     slug: "serveur-dns-raspberry-pi",
     title_fr: "Serveur DNS sur Raspberry Pi",
     title_en: "Raspberry Pi DNS server",
-    category: "Système",
+    category: "DNS",
     short_fr:
       "Lab personnel de pratique système/réseau actuellement en phase d'approfondissement.",
     short_en:
