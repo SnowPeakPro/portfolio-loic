@@ -1,166 +1,346 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loïc VIDAL-FERRASSE | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loïc VIDAL-FERRASSE | Réseaux, systèmes &amp; cybersécurité</title>
     <meta
       name="description"
-      content="Portfolio de Loïc VIDAL-FERRASSE, étudiant BUT Réseaux & Télécommunications à l'IUT de Béziers."
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="style.css" />
+      content="Portfolio de Loïc VIDAL-FERRASSE, étudiant en BUT Réseaux &amp; Télécommunications parcours Cybersécurité et alternant technicien conseil chez XEFI Narbonne."
+    >
+    <meta name="theme-color" content="#07111f">
+    <link rel="canonical" href="https://snowpeakpro.github.io/portfolio-loic/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Loïc VIDAL-FERRASSE | Portfolio cybersécurité">
+    <meta
+      property="og:description"
+      content="Projets, expérience et pratique en réseaux, systèmes, automatisation et cybersécurité."
+    >
+    <meta property="og:url" content="https://snowpeakpro.github.io/portfolio-loic/">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Loïc VIDAL-FERRASSE",
+        "url": "https://snowpeakpro.github.io/portfolio-loic/",
+        "jobTitle": "Alternant technicien conseil",
+        "description": "Étudiant en troisième année de BUT Réseaux & Télécommunications, parcours Cybersécurité, à l'IUT de Béziers.",
+        "sameAs": [
+          "https://github.com/SnowPeakPro",
+          "https://www.linkedin.com/in/loicvidalferrasse/",
+          "https://tryhackme.com/p/SnowPeakPro"
+        ]
+      }
+    </script>
   </head>
+
   <body data-page="home">
     <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-    <div class="side-decor side-decor--left" aria-hidden="true"></div>
-    <div class="side-decor side-decor--right" aria-hidden="true"></div>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow--one" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow--two" aria-hidden="true"></div>
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a href="#hero" class="brand" aria-label="Accueil portfolio">LVF</a>
+        <a href="#hero" class="brand" aria-label="Retour à l'accueil">
+          <span class="brand-mark">LVF</span>
+          <span class="brand-text">Loïc Vidal-Ferrasse</span>
+        </a>
 
-        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
           <span></span><span></span><span></span>
         </button>
 
         <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
-          <a data-i18n="nav_home" href="#hero">Accueil</a>
-          <a data-i18n="nav_about" href="#about">À propos</a>
-          <a data-i18n="nav_skills" href="#skills">Compétences</a>
+          <a data-i18n="nav_profile" href="#profile">Profil</a>
           <a data-i18n="nav_projects" href="#projects">Projets</a>
           <a data-i18n="nav_experience" href="#experience">Expérience</a>
-          <a data-i18n="nav_education" href="#education">Formation</a>
-          <a data-i18n="nav_certs" href="#certifications">Certifications</a>
-          <a data-i18n="nav_cyber" href="#cyber">Cyber</a>
+          <a data-i18n="nav_cyber" href="#cyber-lab">Cyber lab</a>
+          <a data-i18n="nav_watch" href="#watch">Veille</a>
           <a data-i18n="nav_contact" href="#contact">Contact</a>
         </nav>
 
-        <button id="lang-toggle" class="lang-toggle" aria-label="Basculer la langue">EN</button>
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Afficher le site en anglais">EN</button>
       </div>
     </header>
 
     <main id="main-content">
-      <section id="hero" class="section hero-section reveal">
+      <section id="hero" class="section hero-section">
         <div class="container hero-grid">
-          <div>
-            <p class="eyebrow" data-i18n="hero_eyebrow">Portfolio professionnel</p>
-            <h1 data-i18n="hero_name">Loïc VIDAL-FERRASSE</h1>
-            <h2 class="hero-title" data-i18n="hero_title">Étudiant BUT Réseaux & Télécommunications</h2>
+          <div class="hero-copy reveal">
+            <p class="eyebrow" data-i18n="hero_eyebrow">BUT R&amp;T • Cybersécurité • Alternance</p>
+            <h1>Loïc <span>VIDAL-FERRASSE</span></h1>
+            <h2 data-i18n="hero_title">J’administre, j’automatise et je sécurise des environnements numériques.</h2>
             <p class="hero-intro" data-i18n="hero_intro">
-              Étudiant de 20 ans en 2e année de BUT R&T à l'IUT de Béziers, en alternance chez Xefi comme Technicien conseil.
+              Étudiant en troisième année de BUT Réseaux &amp; Télécommunications, parcours Cybersécurité, et alternant technicien conseil chez XEFI Narbonne.
             </p>
+
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Voir les projets</a>
-              <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">Me contacter</a>
+              <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Découvrir mes réalisations</a>
+              <a
+                href="https://tryhackme.com/p/SnowPeakPro"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="hero_btn_tryhackme"
+              >Voir mon profil TryHackMe</a>
+            </div>
+
+            <ul class="hero-links" aria-label="Profils professionnels">
+              <li><a href="https://github.com/SnowPeakPro" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+              <li><a href="https://www.linkedin.com/in/loicvidalferrasse/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+              <li><a href="mailto:loic.vidalferrasse.pro@gmail.com">Email ↗</a></li>
+            </ul>
+          </div>
+
+          <aside class="profile-console reveal" aria-label="Résumé technique">
+            <div class="console-topbar">
+              <div class="console-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>profile.json</span>
+            </div>
+            <div class="console-content">
+              <div class="profile-identity">
+                <img src="assets/avatar.svg" alt="Avatar stylisé de Loïc Vidal-Ferrasse" class="avatar">
+                <div>
+                  <p class="availability"><span aria-hidden="true"></span><span data-i18n="hero_status">En progression continue</span></p>
+                  <p class="profile-role" data-i18n="hero_role">Technicien conseil • Étudiant cyber</p>
+                </div>
+              </div>
+              <dl class="console-list">
+                <div><dt>focus</dt><dd>réseaux · systèmes · cyber</dd></div>
+                <div><dt>stack</dt><dd>PowerShell · Atera · M365</dd></div>
+                <div><dt>lab</dt><dd>Windows · Linux · TryHackMe</dd></div>
+                <div><dt>location</dt><dd>Narbonne · Béziers</dd></div>
+              </dl>
+            </div>
+          </aside>
+        </div>
+
+        <div class="container proof-strip reveal" role="group" aria-label="Informations clés">
+          <article><strong data-i18n="proof_year_value">3e année</strong><span data-i18n="proof_year_label">BUT Réseaux &amp; Télécommunications</span></article>
+          <article><strong>2025–2027</strong><span data-i18n="proof_work_label">Alternance chez XEFI Narbonne</span></article>
+          <article><strong>≈ 5× / semaine</strong><span data-i18n="proof_thm_label">Pratique sur TryHackMe</span></article>
+          <article><strong>Cyber</strong><span data-i18n="proof_track_label">Parcours de spécialisation</span></article>
+        </div>
+      </section>
+
+      <section id="profile" class="section section-muted">
+        <div class="container split-layout">
+          <div class="section-heading reveal">
+            <p class="section-kicker" data-i18n="profile_kicker">Mon profil</p>
+            <h2 data-i18n="profile_title">Une progression construite entre formation et terrain</h2>
+          </div>
+          <div class="profile-copy reveal">
+            <p data-i18n="profile_text_1">
+              Mon parcours associe les connaissances acquises en BUT R&amp;T à des missions réalisées en entreprise. Cette complémentarité me permet de comprendre une infrastructure, d’intervenir avec méthode et de documenter les solutions mises en place.
+            </p>
+            <p data-i18n="profile_text_2">
+              Je m’intéresse particulièrement à l’administration Windows et Linux, à l’automatisation des tâches récurrentes, à la sécurisation des services et à la supervision des environnements clients.
+            </p>
+            <div class="principle-grid">
+              <article><span>01</span><h3 data-i18n="principle_1_title">Comprendre</h3><p data-i18n="principle_1_text">Analyser le besoin et l’existant avant d’agir.</p></article>
+              <article><span>02</span><h3 data-i18n="principle_2_title">Fiabiliser</h3><p data-i18n="principle_2_text">Tester, journaliser et rendre la solution reproductible.</p></article>
+              <article><span>03</span><h3 data-i18n="principle_3_title">Transmettre</h3><p data-i18n="principle_3_text">Documenter clairement pour faciliter la maintenance.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker" data-i18n="projects_kicker">Réalisations</p>
+              <h2 data-i18n="projects_title">Des projets reliés à des besoins concrets</h2>
+            </div>
+            <p data-i18n="projects_subtitle">Projets professionnels, académiques et personnels documentés sous forme d’études de cas.</p>
+          </div>
+
+          <div class="project-controls reveal">
+            <label class="sr-only" for="project-search" data-i18n="projects_search_label">Rechercher un projet</label>
+            <input id="project-search" type="search" placeholder="Rechercher un projet ou une technologie..." data-i18n-placeholder="projects_search_placeholder">
+            <div id="project-filters" class="filters" role="group" aria-label="Filtrer les projets"></div>
+          </div>
+
+          <div id="projects-grid" class="project-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-muted">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker" data-i18n="experience_kicker">Expérience</p>
+              <h2 data-i18n="experience_title">Alternance chez XEFI Narbonne</h2>
+            </div>
+            <p data-i18n="experience_intro">Une expérience terrain au contact d’infrastructures et de besoins clients variés.</p>
+          </div>
+
+          <div class="experience-layout">
+            <article class="experience-main reveal">
+              <div class="experience-meta">
+                <span>2025–2027</span>
+                <span data-i18n="experience_contract">Alternance</span>
+              </div>
+              <h3 data-i18n="experience_role">Technicien conseil</h3>
+              <p data-i18n="experience_text">
+                J’interviens sur la préparation, l’administration, la sécurisation et le dépannage d’environnements informatiques professionnels, avec une attention particulière portée au suivi des actions et à la continuité de service.
+              </p>
+              <ul class="tag-list">
+                <li>Windows</li><li>Microsoft 365</li><li>Exchange Online</li><li>Atera</li><li>Sophos</li><li>PowerShell</li><li>VMware</li>
+              </ul>
+            </article>
+
+            <div class="mission-grid" id="mission-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker" data-i18n="skills_kicker">Compétences</p>
+              <h2 data-i18n="skills_title">Des compétences appuyées par la pratique</h2>
+            </div>
+            <p data-i18n="skills_intro">Chaque domaine est relié à un contexte réel : alternance, formation ou laboratoire personnel.</p>
+          </div>
+          <div id="skills-grid" class="skill-grid"></div>
+        </div>
+      </section>
+
+      <section id="cyber-lab" class="section cyber-section">
+        <div class="container">
+          <div class="section-head section-head--light reveal">
+            <div>
+              <p class="section-kicker" data-i18n="cyber_kicker">Cyber lab</p>
+              <h2 data-i18n="cyber_title">Une pratique régulière sur TryHackMe</h2>
+            </div>
+            <p data-i18n="cyber_intro">Des laboratoires pour renforcer mes connaissances et manipuler des outils dans un environnement autorisé.</p>
+          </div>
+
+          <div class="provisional-banner reveal" role="note">
+            <span class="provisional-dot" aria-hidden="true"></span>
+            <p><strong data-i18n="provisional_title">Aperçu provisoire</strong> — <span data-i18n="provisional_text">les statistiques, rooms et badges seront remplacés par mes données réelles.</span></p>
+          </div>
+
+          <div class="thm-overview reveal">
+            <article class="thm-profile-card">
+              <div class="thm-avatar" aria-hidden="true">SP</div>
+              <div>
+                <p class="card-label">TryHackMe</p>
+                <h3>SnowPeakPro</h3>
+                <p data-i18n="thm_profile_text">Pratique personnelle d’environ cinq sessions par semaine.</p>
+                <a href="https://tryhackme.com/p/SnowPeakPro" target="_blank" rel="noopener noreferrer" class="text-link" data-i18n="thm_profile_link">Ouvrir le profil public ↗</a>
+              </div>
+            </article>
+            <div id="thm-stats" class="thm-stats"></div>
+          </div>
+
+          <div class="cyber-tabs reveal" role="tablist" aria-label="Progression TryHackMe">
+            <button class="cyber-tab active" type="button" id="tab-rooms" role="tab" aria-selected="true" aria-controls="panel-rooms" data-panel="rooms" data-i18n="thm_tab_rooms">Rooms marquantes</button>
+            <button class="cyber-tab" type="button" id="tab-paths" role="tab" aria-selected="false" aria-controls="panel-paths" data-panel="paths" data-i18n="thm_tab_paths">Parcours</button>
+            <button class="cyber-tab" type="button" id="tab-badges" role="tab" aria-selected="false" aria-controls="panel-badges" data-panel="badges" data-i18n="thm_tab_badges">Badges</button>
+          </div>
+
+          <div id="panel-rooms" class="cyber-panel" role="tabpanel" aria-labelledby="tab-rooms"></div>
+          <div id="panel-paths" class="cyber-panel" role="tabpanel" aria-labelledby="tab-paths" hidden></div>
+          <div id="panel-badges" class="cyber-panel" role="tabpanel" aria-labelledby="tab-badges" hidden></div>
+        </div>
+      </section>
+
+      <section id="watch" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker" data-i18n="watch_kicker">Veille technologique</p>
+              <h2 data-i18n="watch_title">Suivre, vérifier et comprendre l’actualité cyber</h2>
+            </div>
+            <p data-i18n="watch_intro">Ma veille s’appuie actuellement sur des organismes institutionnels et des créateurs de contenu spécialisés.</p>
+          </div>
+
+          <div class="watch-method reveal">
+            <article><span>01</span><h3 data-i18n="watch_step_1">Collecter</h3><p data-i18n="watch_step_1_text">Identifier les sujets, alertes et nouvelles pratiques.</p></article>
+            <article><span>02</span><h3 data-i18n="watch_step_2">Recouper</h3><p data-i18n="watch_step_2_text">Comparer plusieurs sources avant de retenir une information.</p></article>
+            <article><span>03</span><h3 data-i18n="watch_step_3">Synthétiser</h3><p data-i18n="watch_step_3_text">Conserver les éléments utiles et leurs impacts techniques.</p></article>
+          </div>
+
+          <div class="source-layout">
+            <article class="source-group reveal">
+              <div class="source-group-head">
+                <span class="source-icon" aria-hidden="true">INS</span>
+                <div><p class="card-label" data-i18n="watch_sources_label">Sources suivies</p><h3 data-i18n="watch_institutions">Organismes institutionnels</h3></div>
+              </div>
+              <div id="institution-list" class="source-list"></div>
+            </article>
+
+            <article class="source-group reveal">
+              <div class="source-group-head">
+                <span class="source-icon" aria-hidden="true">YT</span>
+                <div><p class="card-label" data-i18n="watch_sources_label">Sources suivies</p><h3 data-i18n="watch_channels">Chaînes spécialisées</h3></div>
+              </div>
+              <div id="channel-list" class="source-list"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section section-muted">
+        <div class="container education-layout">
+          <div>
+            <div class="section-heading reveal">
+              <p class="section-kicker" data-i18n="education_kicker">Parcours</p>
+              <h2 data-i18n="education_title">Formation</h2>
+            </div>
+            <div class="education-timeline reveal">
+              <article>
+                <span>2024–2027</span>
+                <h3 data-i18n="education_but_title">BUT Réseaux &amp; Télécommunications</h3>
+                <p data-i18n="education_but_text">IUT de Béziers • Troisième année • Parcours Cybersécurité</p>
+              </article>
+              <article>
+                <span>2021–2024</span>
+                <h3 data-i18n="education_bac_title">Baccalauréat général</h3>
+                <p data-i18n="education_bac_text">Mathématiques, NSI et Maths expertes • Mention Bien</p>
+              </article>
             </div>
           </div>
 
-          <aside class="hero-card" aria-label="Résumé de profil">
-            <img src="assets/avatar.svg" alt="Avatar stylisé de Loïc VIDAL-FERRASSE" class="avatar" />
-            <ul>
-              <li data-i18n="hero_point_1">BUT R&T - IUT de Béziers (2024-2027)</li>
-              <li data-i18n="hero_point_2">Alternance Xefi (2025-2027)</li>
-              <li data-i18n="hero_point_3">Objectif : cybersécurité et réseaux</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section id="about" class="section reveal">
-        <div class="container">
-          <h2 data-i18n="about_title">À propos</h2>
-          <p data-i18n="about_text_1">Je m'appelle Loïc VIDAL-FERRASSE. Mon parcours associe formation académique et expérience en alternance.</p>
-          <p data-i18n="about_text_2">Je développe progressivement mes compétences en réseaux, administration système et cybersécurité.</p>
-          <p data-i18n="about_text_3">Ce portfolio sert de base durable pour documenter mes projets et ma progression professionnelle.</p>
-        </div>
-      </section>
-
-      <section id="skills" class="section reveal">
-        <div class="container">
-          <h2 data-i18n="skills_title">Compétences</h2>
-          <div id="skills-grid" class="card-grid"></div>
-        </div>
-      </section>
-
-      <section id="projects" class="section reveal">
-        <div class="container">
-          <div class="section-head">
-            <h2 data-i18n="projects_title">Projets</h2>
-            <p data-i18n="projects_subtitle">Une base claire est en place pour publier mes projets détaillés progressivement.</p>
-          </div>
-          <div class="project-controls">
-            <label class="sr-only" for="project-search" data-i18n="projects_search_label">Rechercher un projet</label>
-            <input id="project-search" type="search" placeholder="Rechercher un projet..." data-i18n-placeholder="projects_search_placeholder" />
-            <div id="project-filters" class="filters" role="group" aria-label="Filtres catégories"></div>
-          </div>
-          <div id="projects-grid" class="card-grid"></div>
-        </div>
-      </section>
-
-      <section id="experience" class="section reveal">
-        <div class="container">
-          <h2 data-i18n="exp_title">Expérience professionnelle</h2>
-          <div class="timeline" id="experience-timeline"></div>
-        </div>
-      </section>
-
-      <section id="education" class="section reveal">
-        <div class="container">
-          <h2 data-i18n="education_title">Formation</h2>
-          <div class="education-grid">
-            <article class="glass-card">
-              <h3 data-i18n="education_item_title">BUT Réseaux & Télécommunications</h3>
-              <p data-i18n="education_item_text">IUT de Béziers • 2024-2027 • Deuxième année • Spécialité Cybersécurité.</p>
-            </article>
-            <article class="glass-card">
-              <h3 data-i18n="education_item_2_title">Bac Général</h3>
-              <p data-i18n="education_item_2_text">2021-2024 • Spécialités : Maths, NSI, Maths expertes • Mention Bien.</p>
-            </article>
+          <div>
+            <div class="section-heading reveal">
+              <p class="section-kicker" data-i18n="certs_kicker">Progression</p>
+              <h2 data-i18n="certs_title">Certifications</h2>
+            </div>
+            <div class="certification-card reveal">
+              <p data-i18n="certs_text">Cette feuille de route distingue les certifications obtenues, en cours et simplement envisagées.</p>
+              <div id="certifications-list" class="certification-list"></div>
+              <p class="data-note" data-i18n="certs_note">Statuts provisoires à confirmer avant publication définitive.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="certifications" class="section reveal">
-        <div class="container">
-          <h2 data-i18n="certs_title">Certifications</h2>
-          <p class="section-intro" data-i18n="certs_text">Les certifications suivantes sont planifiées pour accompagner ma progression.</p>
-          <div id="certifications-grid" class="cert-grid"></div>
-        </div>
-      </section>
-
-      <section id="cyber" class="section reveal">
-        <div class="container">
-          <h2 data-i18n="cyber_title">Axe cybersécurité</h2>
-          <p class="section-intro" data-i18n="cyber_intro">La cybersécurité est l'axe principal de spécialisation, avec une montée en compétence progressive et structurée.</p>
-          <div class="card-grid">
-            <article class="glass-card">
-              <h3 data-i18n="cyber_block_1_title">Futurs objectifs cyber</h3>
-              <p data-i18n="cyber_block_1_text">Approfondir la sécurisation d'infrastructures réseau et système en contexte professionnel.</p>
-            </article>
-            <article class="glass-card">
-              <h3 data-i18n="cyber_block_2_title">Outils appris</h3>
-              <p data-i18n="cyber_block_2_text">Pratique progressive d'outils d'administration, de sécurité, de diagnostic et d'automatisation.</p>
-            </article>
-            <article class="glass-card">
-              <h3 data-i18n="cyber_block_3_title">Veille</h3>
-              <p data-i18n="cyber_block_3_text">Suivi des vulnérabilités, bonnes pratiques et actualités techniques pour rester à jour.</p>
-            </article>
+      <section id="contact" class="section contact-section">
+        <div class="container contact-card reveal">
+          <div>
+            <p class="section-kicker" data-i18n="contact_kicker">Contact</p>
+            <h2 data-i18n="contact_title">Échangeons autour d’un projet ou d’une opportunité</h2>
+            <p data-i18n="contact_text">Je suis disponible pour discuter de réseaux, d’administration système, d’automatisation et de cybersécurité.</p>
           </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section reveal">
-        <div class="container">
-          <h2 data-i18n="contact_title">Contact</h2>
-          <div class="card-grid">
-            <a class="glass-card contact-card" href="mailto:loic.vidalferrasse.pro@gmail.com"><h3>Email</h3><p>loic.vidalferrasse.pro@gmail.com</p></a>
-            <a class="glass-card contact-card" href="https://www.linkedin.com/in/loicvidalferrasse/" target="_blank" rel="noopener noreferrer"><h3>LinkedIn</h3><p>linkedin.com/in/loicvidalferrasse</p></a>
-            <a class="glass-card contact-card" href="https://github.com/SnowPeakPro" target="_blank" rel="noopener noreferrer"><h3>GitHub</h3><p>github.com/SnowPeakPro</p></a>
-            <a class="glass-card contact-card" href="https://tryhackme.com/p/SnowPeakPro" target="_blank" rel="noopener noreferrer"><h3>TryHackMe</h3><p>tryhackme.com/p/SnowPeakPro</p></a>
-            <article class="glass-card contact-card"><h3 data-i18n="contact_city">Ville</h3><p data-i18n="contact_city_value">Narbonne/Béziers</p></article>
-            <article class="glass-card contact-card"><h3>RootMe</h3><p data-i18n="contact_rootme_status">À compléter</p></article>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:loic.vidalferrasse.pro@gmail.com">loic.vidalferrasse.pro@gmail.com</a>
+            <div class="contact-socials">
+              <a href="https://www.linkedin.com/in/loicvidalferrasse/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href="https://github.com/SnowPeakPro" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://tryhackme.com/p/SnowPeakPro" target="_blank" rel="noopener noreferrer">TryHackMe ↗</a>
+            </div>
           </div>
         </div>
       </section>
@@ -168,14 +348,16 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p><span data-i18n="footer_text">Portfolio de Loïc VIDAL-FERRASSE •</span> <span id="year"></span></p>
-        <a href="#hero" data-i18n="footer_top">Retour en haut</a>
+        <p>© <span id="year"></span> Loïc VIDAL-FERRASSE</p>
+        <p data-i18n="footer_text">Construit pour documenter une progression réelle.</p>
+        <a href="#hero" data-i18n="footer_top">Retour en haut ↑</a>
       </div>
     </footer>
 
-    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">↑</button>
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Retour en haut">↑</button>
 
     <script src="projects.js"></script>
+    <script src="cyber-data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

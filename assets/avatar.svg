@@ -1,9 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
-  <title id="title">Avatar cyber sobre</title>
-  <desc id="desc">Avatar stylisé bleu sombre pour portfolio professionnel.</desc>
-  <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#163254" /><stop offset="100%" stop-color="#2fc9ff" /></linearGradient></defs>
-  <rect width="220" height="220" rx="30" fill="#0a1324"/>
-  <circle cx="110" cy="80" r="38" fill="url(#g1)"/>
-  <path d="M52 180c8-31 30-50 58-50s50 19 58 50" fill="none" stroke="#79ddff" stroke-width="14" stroke-linecap="round"/>
-  <rect x="24" y="24" width="172" height="172" rx="24" fill="none" stroke="#39c7ff" stroke-opacity="0.5"/>
+  <title id="title">Monogramme LVF</title>
+  <desc id="desc">Identité visuelle géométrique bleu nuit et vert d'eau de Loïc Vidal-Ferrasse.</desc>
+  <defs>
+    <linearGradient id="avatar-bg" x1="20" y1="12" x2="205" y2="211" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#153653"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="avatar-line" x1="48" y1="50" x2="176" y2="178" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59e1c1"/>
+      <stop offset="1" stop-color="#65b8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="220" rx="38" fill="url(#avatar-bg)"/>
+  <path d="M44 66 81 44l39 21 38-20 20 35-18 38 18 38-34 21-39-17-41 17-21-35 19-40-18-36Z" fill="none" stroke="#8db9cf" stroke-opacity=".18"/>
+  <path d="M52 53h28M140 50h28M49 168h28M143 171h28" stroke="url(#avatar-line)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="47" cy="53" r="5" fill="#59e1c1"/>
+  <circle cx="173" cy="50" r="5" fill="#65b8ff"/>
+  <circle cx="44" cy="168" r="5" fill="#65b8ff"/>
+  <circle cx="176" cy="171" r="5" fill="#59e1c1"/>
+  <path d="M61 73v75h47v-16H79V73H61Zm56 0 18 75h18l18-75h-18l-9 50-9-50h-18Z" fill="url(#avatar-line)"/>
+  <rect x="12" y="12" width="196" height="196" rx="30" fill="none" stroke="#59e1c1" stroke-opacity=".22"/>
 </svg>

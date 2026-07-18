@@ -1,0 +1,5 @@
+Contact: mailto:loic.vidalferrasse.pro@gmail.com
+Expires: 2027-07-18T23:59:59.000Z
+Preferred-Languages: fr, en
+Canonical: https://snowpeakpro.github.io/portfolio-loic/.well-known/security.txt
+Policy: https://snowpeakpro.github.io/portfolio-loic/
