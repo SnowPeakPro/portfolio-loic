@@ -2,445 +2,453 @@ const LANG_KEY = "portfolio_lang";
 
 const I18N = {
   fr: {
-    nav_home: "Accueil",
-    nav_about: "À propos",
-    nav_skills: "Compétences",
+    page_title: "Loïc VIDAL-FERRASSE | Réseaux, systèmes & cybersécurité",
+    nav_profile: "Profil",
     nav_projects: "Projets",
     nav_experience: "Expérience",
-    nav_education: "Formation",
-    nav_certs: "Certifications",
-    nav_cyber: "Cyber",
+    nav_cyber: "Cyber lab",
+    nav_watch: "Veille",
     nav_contact: "Contact",
-    hero_eyebrow: "Portfolio professionnel",
-    hero_name: "Loïc VIDAL-FERRASSE",
-    hero_title: "Étudiant BUT Réseaux & Télécommunications",
+    hero_eyebrow: "BUT R&T • Cybersécurité • Alternance",
+    hero_title: "J’administre, j’automatise et je sécurise des environnements numériques.",
     hero_intro:
-      "Étudiant de 20 ans en deuxième année de BUT R&T à l'IUT de Béziers, en alternance chez Xefi en tant que Technicien conseil. Ce site présente ma progression en réseaux, administration système et cybersécurité.",
-    hero_btn_projects: "Voir les projets",
-    hero_btn_contact: "Me contacter",
-    hero_point_1: "BUT R&T - IUT de Béziers (2024-2027)",
-    hero_point_2: "Alternance Xefi (2025-2027)",
-    hero_point_3: "Objectif : évoluer en cybersécurité et réseaux",
-    about_title: "À propos",
-    about_text_1:
-      "Je m'appelle Loïc VIDAL-FERRASSE. Mon parcours associe une formation BUT Réseaux & Télécommunications et une expérience terrain en alternance.",
-    about_text_2:
-      "Je développe progressivement mes compétences en réseaux, administration système et cybersécurité dans une logique de progression continue.",
-    about_text_3:
-      "Ce portfolio sert de base durable pour documenter mes projets, structurer mes acquis et préparer mes futures réalisations.",
-    skills_title: "Compétences",
-    skill_level_label: "Niveau",
-    projects_title: "Projets",
-    projects_subtitle:
-      "Une base claire est en place pour publier mes projets détaillés au fur et à mesure.",
+      "Étudiant en troisième année de BUT Réseaux & Télécommunications, parcours Cybersécurité, et alternant technicien conseil chez XEFI Narbonne.",
+    hero_btn_projects: "Découvrir mes réalisations",
+    hero_btn_tryhackme: "Voir mon profil TryHackMe",
+    hero_status: "En progression continue",
+    hero_role: "Technicien conseil • Étudiant cyber",
+    proof_year_value: "3e année",
+    proof_year_label: "BUT Réseaux & Télécommunications",
+    proof_work_label: "Alternance chez XEFI Narbonne",
+    proof_thm_label: "Pratique sur TryHackMe",
+    proof_track_label: "Parcours de spécialisation",
+    profile_kicker: "Mon profil",
+    profile_title: "Une progression construite entre formation et terrain",
+    profile_text_1:
+      "Mon parcours associe les connaissances acquises en BUT R&T à des missions réalisées en entreprise. Cette complémentarité me permet de comprendre une infrastructure, d’intervenir avec méthode et de documenter les solutions mises en place.",
+    profile_text_2:
+      "Je m’intéresse particulièrement à l’administration Windows et Linux, à l’automatisation des tâches récurrentes, à la sécurisation des services et à la supervision des environnements clients.",
+    principle_1_title: "Comprendre",
+    principle_1_text: "Analyser le besoin et l’existant avant d’agir.",
+    principle_2_title: "Fiabiliser",
+    principle_2_text: "Tester, journaliser et rendre la solution reproductible.",
+    principle_3_title: "Transmettre",
+    principle_3_text: "Documenter clairement pour faciliter la maintenance.",
+    projects_kicker: "Réalisations",
+    projects_title: "Des projets reliés à des besoins concrets",
+    projects_subtitle: "Projets professionnels, académiques et personnels documentés sous forme d’études de cas.",
     projects_search_label: "Rechercher un projet",
-    projects_search_placeholder: "Rechercher un projet...",
-    projects_filter_all: "Tout",
-    projects_filter_networks: "Réseaux",
-    projects_filter_cyber: "Cyber",
-    projects_filter_dns: "DNS",
-    projects_filter_ai: "IA",
-    projects_btn_detail: "Voir le détail",
-    projects_btn_link: "Voir le lien",
-    projects_no_link: "Lien à venir",
-    projects_image_placeholder: "Visuel temporaire",
-    projects_empty: "Aucun projet ne correspond à la recherche actuelle.",
-    projects_empty_category: "Aucun projet publié pour la catégorie « {category} » pour le moment.",
-    exp_title: "Expérience professionnelle",
+    projects_search_placeholder: "Rechercher un projet ou une technologie...",
+    projects_filter_all: "Tous",
+    projects_empty: "Aucun projet ne correspond à cette recherche.",
+    projects_view: "Voir l’étude de cas →",
+    experience_kicker: "Expérience",
+    experience_title: "Alternance chez XEFI Narbonne",
+    experience_intro: "Une expérience terrain au contact d’infrastructures et de besoins clients variés.",
+    experience_contract: "Alternance",
+    experience_role: "Technicien conseil",
+    experience_text:
+      "J’interviens sur la préparation, l’administration, la sécurisation et le dépannage d’environnements informatiques professionnels, avec une attention particulière portée au suivi des actions et à la continuité de service.",
+    skills_kicker: "Compétences",
+    skills_title: "Des compétences appuyées par la pratique",
+    skills_intro: "Chaque domaine est relié à un contexte réel : alternance, formation ou laboratoire personnel.",
+    cyber_kicker: "Cyber lab",
+    cyber_title: "Une pratique régulière sur TryHackMe",
+    cyber_intro: "Des laboratoires pour renforcer mes connaissances et manipuler des outils dans un environnement autorisé.",
+    provisional_title: "Aperçu provisoire",
+    provisional_text: "les statistiques, rooms et badges seront remplacés par mes données réelles.",
+    thm_profile_text: "Pratique personnelle d’environ cinq sessions par semaine.",
+    thm_profile_link: "Ouvrir le profil public ↗",
+    thm_tab_rooms: "Rooms marquantes",
+    thm_tab_paths: "Parcours",
+    thm_tab_badges: "Badges",
+    thm_provisional: "provisoire",
+    watch_kicker: "Veille technologique",
+    watch_title: "Suivre, vérifier et comprendre l’actualité cyber",
+    watch_intro: "Ma veille s’appuie actuellement sur des organismes institutionnels et des créateurs de contenu spécialisés.",
+    watch_step_1: "Collecter",
+    watch_step_1_text: "Identifier les sujets, alertes et nouvelles pratiques.",
+    watch_step_2: "Recouper",
+    watch_step_2_text: "Comparer plusieurs sources avant de retenir une information.",
+    watch_step_3: "Synthétiser",
+    watch_step_3_text: "Conserver les éléments utiles et leurs impacts techniques.",
+    watch_sources_label: "Sources suivies",
+    watch_institutions: "Organismes institutionnels",
+    watch_channels: "Chaînes spécialisées",
+    education_kicker: "Parcours",
     education_title: "Formation",
-    education_item_title: "BUT Réseaux & Télécommunications",
-    education_item_text:
-      "IUT de Béziers • 2024-2027 • Deuxième année • Spécialité Cybersécurité.",
-    education_item_2_title: "Bac Général",
-    education_item_2_text:
-      "Lycée • 2021-2024 • Spécialités : Maths, NSI, Maths expertes • Mention Bien.",
+    education_but_title: "BUT Réseaux & Télécommunications",
+    education_but_text: "IUT de Béziers • Troisième année • Parcours Cybersécurité",
+    education_bac_title: "Baccalauréat général",
+    education_bac_text: "Mathématiques, NSI et Maths expertes • Mention Bien",
+    certs_kicker: "Progression",
     certs_title: "Certifications",
-    certs_text:
-      "Les certifications suivantes sont planifiées pour accompagner ma progression.",
-    certs_status_coming: "À venir",
-    certs_status_note:
-      "Certification non encore obtenue, prévue dans la progression du parcours.",
-    cyber_title: "Axe cybersécurité",
-    cyber_intro:
-      "La cybersécurité représente l'axe principal de spécialisation, avec une montée en compétence progressive, documentée et réaliste.",
-    cyber_block_1_title: "Futurs objectifs cyber",
-    cyber_block_1_text:
-      "Approfondir la sécurisation des infrastructures réseau et système en contexte professionnel.",
-    cyber_block_2_title: "Outils appris",
-    cyber_block_2_text:
-      "Pratique progressive d'outils d'administration, de sécurité, de diagnostic et d'automatisation.",
-    cyber_block_3_title: "Veille",
-    cyber_block_3_text:
-      "Suivi régulier des vulnérabilités, des bonnes pratiques et des actualités techniques.",
-    contact_title: "Contact",
-    contact_city: "Ville",
-    contact_city_value: "Narbonne/Béziers",
-    contact_rootme_status: "À compléter",
-    footer_text: "Portfolio de Loïc VIDAL-FERRASSE •",
-    footer_top: "Retour en haut",
+    certs_text: "Cette feuille de route distingue les certifications obtenues, en cours et simplement envisagées.",
+    certs_note: "Statuts provisoires à confirmer avant publication définitive.",
+    contact_kicker: "Contact",
+    contact_title: "Échangeons autour d’un projet ou d’une opportunité",
+    contact_text: "Je suis disponible pour discuter de réseaux, d’administration système, d’automatisation et de cybersécurité.",
+    footer_text: "Construit pour documenter une progression réelle.",
+    footer_top: "Retour en haut ↑",
     project_back: "← Retour aux projets",
     project_not_found_title: "Projet introuvable",
-    project_not_found_text:
-      "Le projet demandé n'existe pas encore ou le lien est invalide.",
-    project_category: "Catégorie",
+    project_not_found_text: "Le projet demandé n’existe pas ou le lien utilisé est invalide.",
+    project_fact_type: "Contexte",
+    project_fact_status: "État",
+    project_fact_date: "Période",
+    project_context: "Contexte",
+    project_objectives: "Objectifs",
+    project_actions: "Travail réalisé ou préparé",
+    project_results: "Résultats et état actuel",
+    project_challenges: "Difficultés techniques",
+    project_next: "Prochaines étapes",
+    project_evidence: "Preuves associées",
     project_technologies: "Technologies",
-    project_key_points: "Points clés",
-    project_result: "État actuel",
-    project_next_step: "Prochaine étape",
-    exp_items: [
+    categories: {
+      Automatisation: "Automatisation",
+      Systèmes: "Systèmes",
+      Cybersécurité: "Cybersécurité",
+      Réseaux: "Réseaux"
+    },
+    missions: [
       {
-        title: "Xefi — Technicien conseil (alternance)",
-        period: "2025 à 2027",
-        text: "Dans le cadre de mon alternance, je réalise le montage et la configuration de serveurs, la sécurisation d'environnements clients via l'installation et le paramétrage de pare-feu Sophos, ainsi que le dépannage et le suivi des actions techniques."
+        code: "SYS / SUPPORT",
+        title: "Administration et dépannage",
+        text: "Préparation de postes et serveurs, diagnostic d’incidents et suivi des interventions techniques."
+      },
+      {
+        code: "M365 / EXO",
+        title: "Services Microsoft 365",
+        text: "Gestion de comptes, alias, groupes de distribution et paramètres Exchange Online."
+      },
+      {
+        code: "SEC / SOPHOS",
+        title: "Sécurisation des environnements",
+        text: "Déploiement, paramétrage et vérification de solutions Sophos Endpoint, Central et pare-feu."
+      },
+      {
+        code: "RMM / SCRIPT",
+        title: "Automatisation et supervision",
+        text: "Scripts PowerShell, remontées d’inventaire, contrôles préventifs et automatisations Atera."
       }
     ],
-    certs_items: [
-      { name: "Google Cybersecurity Certificate", logo: "assets/certifications/google-cybersecurity.svg" },
-      { name: "GRC MASTERY", logo: "assets/certifications/grc-mastery.svg" },
-      { name: "ISC2 CC", logo: "assets/certifications/isc2-cc.svg" },
-      { name: "Fortinet NSE 1-3", logo: "assets/certifications/fortinet-nse-1-3.svg" },
-      { name: "Security Blue Team BTJA", logo: "assets/certifications/security-blue-team-btja.svg" },
-      { name: "Cisco Introduction to Cybersecurity", logo: "assets/certifications/cisco-intro-cybersecurity.svg" },
-      { name: "EC-Council Essential", logo: "assets/certifications/ec-council-essential.svg" }
-    ],
-    skills_items: [
+    skills: [
       {
+        context: "Alternance + formation",
+        title: "Administration systèmes",
+        description: "Installer, configurer, diagnostiquer et maintenir des environnements Windows et Linux.",
+        tags: ["Windows Server", "Linux", "Services", "VMware"]
+      },
+      {
+        context: "Formation + laboratoire",
         title: "Réseaux",
-        level: "Débutant",
-        description:
-          "Bases en segmentation, adressage et routage dans des environnements de laboratoire et de formation.",
-        tags: ["IPv4/IPv6", "VLAN", "Routage"]
+        description: "Concevoir une segmentation, configurer les équipements et analyser les communications.",
+        tags: ["IPv4/IPv6", "VLAN", "Routage", "STP"]
       },
       {
+        context: "Formation + TryHackMe",
         title: "Cybersécurité",
-        level: "Débutant",
-        description:
-          "Application progressive de bonnes pratiques de sécurisation en réseau et administration système.",
-        tags: ["Hardening", "ACL", "Pare-feu"]
+        description: "Appliquer le filtrage, le durcissement, le chiffrement et une démarche d’analyse structurée.",
+        tags: ["nftables", "OpenVPN", "PKI", "Hardening"]
       },
       {
-        title: "Administration système",
-        level: "Débutant",
-        description:
-          "Gestion de services Linux/Windows dans un cadre d'apprentissage structuré et encadré.",
-        tags: ["Linux", "Windows", "Services"]
+        context: "Alternance + projets",
+        title: "Scripting et automatisation",
+        description: "Transformer des procédures répétitives en outils testables, journalisés et réutilisables.",
+        tags: ["PowerShell", "Bash", "Ansible", "Atera"]
       },
       {
-        title: "Virtualisation",
-        level: "Débutant",
-        description:
-          "Mise en place de laboratoires pour tester des scénarios techniques de manière contrôlée.",
-        tags: ["VM", "Lab", "Tests"]
+        context: "Alternance",
+        title: "Microsoft 365",
+        description: "Administrer les identités, la messagerie et les groupes dans un environnement professionnel.",
+        tags: ["Exchange Online", "Entra ID", "Groupes", "Alias"]
       },
       {
-        title: "Scripting / automatisation",
-        level: "Débutant",
-        description:
-          "Scripts simples pour standardiser les tâches répétitives et améliorer la régularité des interventions.",
-        tags: ["PowerShell", "Bash", "Automatisation"]
-      },
-      {
-        title: "IA",
-        level: "Débutant",
-        description:
-          "Découverte d'usages d'assistance pour la documentation technique et l'analyse.",
-        tags: ["Prompting", "Assistance", "Productivité"]
+        context: "Alternance + formation",
+        title: "Supervision et diagnostic",
+        description: "Collecter des informations, interpréter les journaux et isoler méthodiquement la cause d’un incident.",
+        tags: ["Atera", "Wireshark", "Logs", "Monitoring"]
       }
     ]
   },
   en: {
-    nav_home: "Home",
-    nav_about: "About",
-    nav_skills: "Skills",
+    page_title: "Loïc VIDAL-FERRASSE | Networks, systems & cybersecurity",
+    nav_profile: "Profile",
     nav_projects: "Projects",
     nav_experience: "Experience",
-    nav_education: "Education",
-    nav_certs: "Certifications",
-    nav_cyber: "Cyber",
+    nav_cyber: "Cyber lab",
+    nav_watch: "Monitoring",
     nav_contact: "Contact",
-    hero_eyebrow: "Professional portfolio",
-    hero_name: "Loïc VIDAL-FERRASSE",
-    hero_title: "BUT Network & Telecommunications Student",
+    hero_eyebrow: "Networks & Telecom • Cybersecurity • Work-study",
+    hero_title: "I administer, automate, and secure digital environments.",
     hero_intro:
-      "I am a 20-year-old second-year BUT Network & Telecommunications student at IUT of Béziers, currently in a work-study role at Xefi as a Technical Support Technician. This site tracks my progress in networking, system administration, and cybersecurity.",
-    hero_btn_projects: "View projects",
-    hero_btn_contact: "Contact me",
-    hero_point_1: "BUT N&T - IUT of Béziers (2024-2027)",
-    hero_point_2: "Work-study at Xefi (2025-2027)",
-    hero_point_3: "Goal: grow in cybersecurity and networking",
-    about_title: "About",
-    about_text_1:
-      "My name is Loïc VIDAL-FERRASSE. My path combines a BUT Network & Telecommunications degree with hands-on work-study experience.",
-    about_text_2:
-      "I am steadily building skills in networking, system administration, and cybersecurity through a realistic learning approach.",
-    about_text_3:
-      "This portfolio is designed as a long-term base to document projects, structure progress, and prepare future work.",
-    skills_title: "Skills",
-    skill_level_label: "Level",
-    projects_title: "Projects",
-    projects_subtitle:
-      "A clear baseline is in place to publish detailed projects progressively.",
-    projects_search_label: "Search a project",
-    projects_search_placeholder: "Search a project...",
+      "Third-year Network & Telecommunications student specializing in cybersecurity and work-study IT support technician at XEFI Narbonne.",
+    hero_btn_projects: "Explore my work",
+    hero_btn_tryhackme: "View my TryHackMe profile",
+    hero_status: "Continuously learning",
+    hero_role: "IT support technician • Cyber student",
+    proof_year_value: "Third year",
+    proof_year_label: "Network & Telecommunications degree",
+    proof_work_label: "Work-study at XEFI Narbonne",
+    proof_thm_label: "Practice on TryHackMe",
+    proof_track_label: "Specialization track",
+    profile_kicker: "My profile",
+    profile_title: "Progress built through education and field experience",
+    profile_text_1:
+      "My path combines the knowledge acquired during my Network & Telecommunications degree with assignments completed in a professional environment. This balance helps me understand infrastructure, work methodically, and document implemented solutions.",
+    profile_text_2:
+      "I am particularly interested in Windows and Linux administration, recurring-task automation, service security, and client-environment monitoring.",
+    principle_1_title: "Understand",
+    principle_1_text: "Analyze the need and current state before taking action.",
+    principle_2_title: "Make reliable",
+    principle_2_text: "Test, log, and make the solution repeatable.",
+    principle_3_title: "Share",
+    principle_3_text: "Document clearly to make maintenance easier.",
+    projects_kicker: "Selected work",
+    projects_title: "Projects connected to real needs",
+    projects_subtitle: "Professional, academic, and personal projects documented as case studies.",
+    projects_search_label: "Search projects",
+    projects_search_placeholder: "Search a project or technology...",
     projects_filter_all: "All",
-    projects_filter_networks: "Networks",
-    projects_filter_cyber: "Cyber",
-    projects_filter_dns: "DNS",
-    projects_filter_ai: "AI",
-    projects_btn_detail: "View details",
-    projects_btn_link: "Open link",
-    projects_no_link: "Link coming soon",
-    projects_image_placeholder: "Temporary visual",
-    projects_empty: "No project matches the current search.",
-    projects_empty_category: "No project has been published in the “{category}” category yet.",
-    exp_title: "Professional experience",
+    projects_empty: "No project matches this search.",
+    projects_view: "View case study →",
+    experience_kicker: "Experience",
+    experience_title: "Work-study at XEFI Narbonne",
+    experience_intro: "Hands-on experience across varied client needs and infrastructures.",
+    experience_contract: "Work-study",
+    experience_role: "IT support technician",
+    experience_text:
+      "I help prepare, administer, secure, and troubleshoot professional IT environments, with particular attention to action tracking and service continuity.",
+    skills_kicker: "Skills",
+    skills_title: "Skills supported by practice",
+    skills_intro: "Every area is tied to a real context: work-study, education, or a personal lab.",
+    cyber_kicker: "Cyber lab",
+    cyber_title: "Regular hands-on practice on TryHackMe",
+    cyber_intro: "Labs used to strengthen my knowledge and practice tools in an authorized environment.",
+    provisional_title: "Provisional preview",
+    provisional_text: "statistics, rooms, and badges will be replaced with my actual data.",
+    thm_profile_text: "Personal practice averaging around five sessions per week.",
+    thm_profile_link: "Open public profile ↗",
+    thm_tab_rooms: "Selected rooms",
+    thm_tab_paths: "Learning paths",
+    thm_tab_badges: "Badges",
+    thm_provisional: "provisional",
+    watch_kicker: "Technology monitoring",
+    watch_title: "Following, checking, and understanding cyber news",
+    watch_intro: "My current monitoring is based on institutional organizations and specialist content creators.",
+    watch_step_1: "Collect",
+    watch_step_1_text: "Identify topics, alerts, and new practices.",
+    watch_step_2: "Cross-check",
+    watch_step_2_text: "Compare several sources before retaining information.",
+    watch_step_3: "Summarize",
+    watch_step_3_text: "Keep useful information and its technical impact.",
+    watch_sources_label: "Followed sources",
+    watch_institutions: "Institutional organizations",
+    watch_channels: "Specialist channels",
+    education_kicker: "Background",
     education_title: "Education",
-    education_item_title: "BUT Network & Telecommunications",
-    education_item_text:
-      "IUT of Béziers • 2024-2027 • Second year • Cybersecurity specialization.",
-    education_item_2_title: "French General Baccalaureate",
-    education_item_2_text:
-      "High school • 2021-2024 • Majors: Mathematics, Computer Science (NSI), Advanced Mathematics • Honors: Good.",
+    education_but_title: "Network & Telecommunications degree",
+    education_but_text: "IUT of Béziers • Third year • Cybersecurity track",
+    education_bac_title: "French general baccalaureate",
+    education_bac_text: "Mathematics, Computer Science, and Advanced Mathematics • Honors",
+    certs_kicker: "Progress",
     certs_title: "Certifications",
-    certs_text:
-      "The following certifications are planned to support my progression.",
-    certs_status_coming: "Coming soon",
-    certs_status_note:
-      "Not completed yet, planned as part of my learning roadmap.",
-    cyber_title: "Cybersecurity focus",
-    cyber_intro:
-      "Cybersecurity is my main specialization axis, with progressive, documented, and realistic skill development.",
-    cyber_block_1_title: "Future cyber goals",
-    cyber_block_1_text:
-      "Strengthen infrastructure security skills for real networking and system environments.",
-    cyber_block_2_title: "Tools learned",
-    cyber_block_2_text:
-      "Progressive practice of administration, security, diagnostic, and automation tools.",
-    cyber_block_3_title: "Monitoring",
-    cyber_block_3_text:
-      "Regular follow-up on vulnerabilities, best practices, and technical updates.",
-    contact_title: "Contact",
-    contact_city: "City",
-    contact_city_value: "Narbonne/Béziers",
-    contact_rootme_status: "Coming soon",
-    footer_text: "Loïc VIDAL-FERRASSE portfolio •",
-    footer_top: "Back to top",
+    certs_text: "This roadmap distinguishes completed, ongoing, and considered certifications.",
+    certs_note: "Provisional statuses to confirm before final publication.",
+    contact_kicker: "Contact",
+    contact_title: "Let’s discuss a project or opportunity",
+    contact_text: "I am available to discuss networks, system administration, automation, and cybersecurity.",
+    footer_text: "Built to document real progress.",
+    footer_top: "Back to top ↑",
     project_back: "← Back to projects",
     project_not_found_title: "Project not found",
-    project_not_found_text:
-      "The requested project is not available yet or the link is invalid.",
-    project_category: "Category",
+    project_not_found_text: "The requested project does not exist or the link is invalid.",
+    project_fact_type: "Context",
+    project_fact_status: "Status",
+    project_fact_date: "Period",
+    project_context: "Context",
+    project_objectives: "Objectives",
+    project_actions: "Work completed or prepared",
+    project_results: "Results and current status",
+    project_challenges: "Technical challenges",
+    project_next: "Next steps",
+    project_evidence: "Related evidence",
     project_technologies: "Technologies",
-    project_key_points: "Key points",
-    project_result: "Current status",
-    project_next_step: "Next step",
-    exp_items: [
+    categories: {
+      Automatisation: "Automation",
+      Systèmes: "Systems",
+      Cybersécurité: "Cybersecurity",
+      Réseaux: "Networking"
+    },
+    missions: [
       {
-        title: "Xefi — Technical Support Technician (work-study)",
-        period: "2025 to 2027",
-        text: "In my work-study role, I handle server assembly and configuration, help secure client environments through Sophos firewall deployment and setup, and perform customer troubleshooting with clear intervention follow-up."
+        code: "SYS / SUPPORT",
+        title: "Administration and troubleshooting",
+        text: "Workstation and server preparation, incident diagnosis, and technical intervention tracking."
+      },
+      {
+        code: "M365 / EXO",
+        title: "Microsoft 365 services",
+        text: "Account, alias, distribution-group, and Exchange Online administration."
+      },
+      {
+        code: "SEC / SOPHOS",
+        title: "Environment security",
+        text: "Deployment, configuration, and validation of Sophos Endpoint, Central, and firewall solutions."
+      },
+      {
+        code: "RMM / SCRIPT",
+        title: "Automation and monitoring",
+        text: "PowerShell scripts, inventory collection, preventive checks, and Atera automation."
       }
     ],
-    certs_items: [
-      { name: "Google Cybersecurity Certificate", logo: "assets/certifications/google-cybersecurity.svg" },
-      { name: "GRC MASTERY", logo: "assets/certifications/grc-mastery.svg" },
-      { name: "ISC2 CC", logo: "assets/certifications/isc2-cc.svg" },
-      { name: "Fortinet NSE 1-3", logo: "assets/certifications/fortinet-nse-1-3.svg" },
-      { name: "Security Blue Team BTJA", logo: "assets/certifications/security-blue-team-btja.svg" },
-      { name: "Cisco Introduction to Cybersecurity", logo: "assets/certifications/cisco-intro-cybersecurity.svg" },
-      { name: "EC-Council Essential", logo: "assets/certifications/ec-council-essential.svg" }
-    ],
-    skills_items: [
+    skills: [
       {
-        title: "Networking",
-        level: "Beginner",
-        description:
-          "Foundations in segmentation, addressing, and routing within lab and training environments.",
-        tags: ["IPv4/IPv6", "VLAN", "Routing"]
-      },
-      {
-        title: "Cybersecurity",
-        level: "Beginner",
-        description:
-          "Progressive application of core security practices in networking and system administration.",
-        tags: ["Hardening", "ACL", "Firewalls"]
-      },
-      {
+        context: "Work-study + education",
         title: "System administration",
-        level: "Beginner",
-        description:
-          "Linux/Windows service management in a structured learning context.",
-        tags: ["Linux", "Windows", "Services"]
+        description: "Install, configure, troubleshoot, and maintain Windows and Linux environments.",
+        tags: ["Windows Server", "Linux", "Services", "VMware"]
       },
       {
-        title: "Virtualization",
-        level: "Beginner",
-        description:
-          "Lab setup to test technical scenarios in controlled conditions.",
-        tags: ["VM", "Lab", "Testing"]
+        context: "Education + lab",
+        title: "Networking",
+        description: "Design segmentation, configure equipment, and analyze communications.",
+        tags: ["IPv4/IPv6", "VLAN", "Routing", "STP"]
       },
       {
-        title: "Scripting / automation",
-        level: "Beginner",
-        description:
-          "Simple scripts to standardize recurring tasks and improve consistency.",
-        tags: ["PowerShell", "Bash", "Automation"]
+        context: "Education + TryHackMe",
+        title: "Cybersecurity",
+        description: "Apply filtering, hardening, encryption, and a structured analysis process.",
+        tags: ["nftables", "OpenVPN", "PKI", "Hardening"]
       },
       {
-        title: "AI",
-        level: "Beginner",
-        description:
-          "Early practical uses for technical assistance, analysis, and documentation.",
-        tags: ["Prompting", "Assistance", "Productivity"]
+        context: "Work-study + projects",
+        title: "Scripting and automation",
+        description: "Turn repetitive procedures into testable, logged, and reusable tools.",
+        tags: ["PowerShell", "Bash", "Ansible", "Atera"]
+      },
+      {
+        context: "Work-study",
+        title: "Microsoft 365",
+        description: "Administer identities, messaging, and groups in a professional environment.",
+        tags: ["Exchange Online", "Entra ID", "Groups", "Aliases"]
+      },
+      {
+        context: "Work-study + education",
+        title: "Monitoring and diagnosis",
+        description: "Collect information, interpret logs, and isolate incident causes methodically.",
+        tags: ["Atera", "Wireshark", "Logs", "Monitoring"]
       }
     ]
   }
-};
-
-const PROJECT_CATEGORIES = ["Réseaux", "Cyber", "DNS", "IA"];
-
-const PROJECT_CATEGORY_LABEL_KEYS = {
-  "Réseaux": "projects_filter_networks",
-  Cyber: "projects_filter_cyber",
-  DNS: "projects_filter_dns",
-  IA: "projects_filter_ai"
 };
 
 let currentLang = localStorage.getItem(LANG_KEY) || "fr";
 let selectedCategory = "all";
 let searchTerm = "";
+let revealObserver = null;
 
-const $ = (selector) => document.querySelector(selector);
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+function languageValue(item, key) {
+  return item[`${key}_${currentLang}`] ?? item[key] ?? "";
+}
+
+function projectCopy(project) {
+  return project.copy[currentLang] || project.copy.fr;
+}
+
+function categoryLabel(category) {
+  return I18N[currentLang].categories[category] || category;
+}
+
+function createTags(tags = []) {
+  return `<ul class="tag-list">${tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>`;
+}
 
 function applyTranslations() {
   const dict = I18N[currentLang];
   document.documentElement.lang = currentLang;
 
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.dataset.i18n;
-    if (dict[key]) element.textContent = dict[key];
+  $$('[data-i18n]').forEach((element) => {
+    const value = dict[element.dataset.i18n];
+    if (typeof value === "string") element.textContent = value;
   });
 
-  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
-    const key = element.dataset.i18nPlaceholder;
-    if (dict[key]) element.setAttribute("placeholder", dict[key]);
+  $$('[data-i18n-placeholder]').forEach((element) => {
+    const value = dict[element.dataset.i18nPlaceholder];
+    if (value) element.setAttribute("placeholder", value);
   });
 
   const langToggle = $("#lang-toggle");
-  if (langToggle) langToggle.textContent = currentLang === "fr" ? "EN" : "FR";
-}
-
-function createTagList(tags = []) {
-  return `<ul class="tag-list">${tags.map((tag) => `<li class="tag">${tag}</li>`).join("")}</ul>`;
-}
-
-function createProjectVisual(project) {
-  if (project.image) {
-    return `<img class="project-thumb" src="${project.image}" alt="${getProjectTitle(project)}" loading="lazy" />`;
+  if (langToggle) {
+    langToggle.textContent = currentLang === "fr" ? "EN" : "FR";
+    langToggle.setAttribute(
+      "aria-label",
+      currentLang === "fr" ? "Afficher le site en anglais" : "Display the website in French"
+    );
   }
 
-  return `<div class="project-thumb project-thumb--placeholder" aria-hidden="true">${I18N[currentLang].projects_image_placeholder}</div>`;
+  if (document.body.dataset.page === "home") document.title = dict.page_title;
 }
 
-function createProjectLink(project) {
-  if (project.link) {
-    return `<a class="btn btn-secondary" href="${project.link}" target="_blank" rel="noopener noreferrer">${I18N[currentLang].projects_btn_link}</a>`;
+function renderProjects() {
+  const container = $("#projects-grid");
+  if (!container) return;
+
+  const normalizedSearch = searchTerm.toLocaleLowerCase(currentLang);
+  const filtered = PROJECTS.filter((project) => {
+    const copy = projectCopy(project);
+    const matchesCategory = selectedCategory === "all" || project.category === selectedCategory;
+    const index = [copy.title, copy.short, copy.status, copy.type, ...project.technologies]
+      .join(" ")
+      .toLocaleLowerCase(currentLang);
+    return matchesCategory && index.includes(normalizedSearch);
+  });
+
+  if (!filtered.length) {
+    container.innerHTML = `<div class="empty-state">${I18N[currentLang].projects_empty}</div>`;
+    return;
   }
 
-  return `<span class="project-link-placeholder">${I18N[currentLang].projects_no_link}</span>`;
-}
-
-function renderSkills() {
-  const container = $("#skills-grid");
-  if (!container) return;
-
-  container.innerHTML = I18N[currentLang].skills_items
-    .map(
-      (skill) => `
-      <article class="glass-card reveal">
-        <h3>${skill.title}</h3>
-        <p class="skill-level">${I18N[currentLang].skill_level_label}: <strong>${skill.level}</strong></p>
-        <p>${skill.description}</p>
-        ${createTagList(skill.tags)}
-      </article>`
-    )
+  container.innerHTML = filtered
+    .map((project) => {
+      const copy = projectCopy(project);
+      return `
+        <article class="project-card reveal">
+          <div class="project-visual tone-${project.tone}" aria-hidden="true"><span>${project.visual}</span></div>
+          <div class="project-content">
+            <div class="project-topline">
+              <span class="project-category">${categoryLabel(project.category)}</span>
+              <span class="project-status">${copy.status}</span>
+            </div>
+            <h3>${copy.title}</h3>
+            <p>${copy.short}</p>
+            ${createTags(project.technologies.slice(0, 4))}
+            <a class="text-link" href="project.html?slug=${encodeURIComponent(project.slug)}">${I18N[currentLang].projects_view}</a>
+          </div>
+        </article>`;
+    })
     .join("");
-}
 
-function renderExperience() {
-  const container = $("#experience-timeline");
-  if (!container) return;
-
-  container.innerHTML = I18N[currentLang].exp_items
-    .map(
-      (item) => `
-      <article class="timeline-item glass-card">
-        <h3>${item.title}</h3>
-        <p><strong>${item.period}</strong></p>
-        <p>${item.text}</p>
-      </article>`
-    )
-    .join("");
-}
-
-function renderCertifications() {
-  const container = $("#certifications-grid");
-  if (!container) return;
-
-  container.innerHTML = I18N[currentLang].certs_items
-    .map(
-      (cert) => `
-      <article class="glass-card cert-card">
-        <img class="cert-logo" src="${cert.logo}" alt="${cert.name} logo" loading="lazy" />
-        <div>
-          <h3>${cert.name}</h3>
-          <p class="cert-status">${I18N[currentLang].certs_status_coming}</p>
-          <p class="cert-note">${I18N[currentLang].certs_status_note}</p>
-        </div>
-      </article>`
-    )
-    .join("");
-}
-
-function getProjectTitle(project) {
-  return currentLang === "fr" ? project.title_fr : project.title_en;
-}
-
-function getProjectShort(project) {
-  return currentLang === "fr" ? project.short_fr : project.short_en;
-}
-
-function getCategoryLabel(category) {
-  const key = PROJECT_CATEGORY_LABEL_KEYS[category];
-  return key ? I18N[currentLang][key] : category;
-}
-
-function hasProjectsForCategory(category) {
-  return PROJECTS.some((project) => project.category === category);
-}
-
-function getEmptyProjectsMessage() {
-  if (selectedCategory !== "all" && !hasProjectsForCategory(selectedCategory)) {
-    return I18N[currentLang].projects_empty_category.replace("{category}", getCategoryLabel(selectedCategory));
-  }
-
-  return I18N[currentLang].projects_empty;
+  observeReveals(container);
 }
 
 function renderProjectFilters() {
   const container = $("#project-filters");
   if (!container) return;
 
-  const allLabel = I18N[currentLang].projects_filter_all;
-  container.innerHTML = ["all", ...PROJECT_CATEGORIES]
+  const categories = ["all", ...PROJECT_CATEGORIES];
+  container.innerHTML = categories
     .map((category) => {
-      const label = category === "all" ? allLabel : getCategoryLabel(category);
-      const isActive = selectedCategory === category ? "active" : "";
-      return `<button class="filter-btn ${isActive}" data-category="${category}" type="button">${label}</button>`;
+      const label = category === "all" ? I18N[currentLang].projects_filter_all : categoryLabel(category);
+      const active = selectedCategory === category;
+      return `<button class="filter-btn${active ? " active" : ""}" type="button" data-category="${category}" aria-pressed="${active}">${label}</button>`;
     })
     .join("");
 
-  container.querySelectorAll(".filter-btn").forEach((button) => {
+  $$(".filter-btn", container).forEach((button) => {
     button.addEventListener("click", () => {
       selectedCategory = button.dataset.category;
       renderProjectFilters();
@@ -449,38 +457,132 @@ function renderProjectFilters() {
   });
 }
 
-function renderProjects() {
-  const container = $("#projects-grid");
+function renderMissions() {
+  const container = $("#mission-grid");
   if (!container) return;
-
-  const filteredProjects = PROJECTS.filter((project) => {
-    const matchesCategory = selectedCategory === "all" || project.category === selectedCategory;
-    const searchIndex = `${project.title_fr} ${project.title_en} ${project.short_fr} ${project.short_en}`.toLowerCase();
-    const matchesSearch = searchIndex.includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  if (!filteredProjects.length) {
-    container.innerHTML = `<div class="empty-state">${getEmptyProjectsMessage()}</div>`;
-    return;
-  }
-
-  container.innerHTML = filteredProjects
+  container.innerHTML = I18N[currentLang].missions
     .map(
-      (project) => `
-      <article class="glass-card project-card reveal">
-        ${createProjectVisual(project)}
-        <p class="project-meta">${getCategoryLabel(project.category)}</p>
-        <h3>${getProjectTitle(project)}</h3>
-        <p>${getProjectShort(project)}</p>
-        ${createTagList(project.technologies)}
-        <div class="project-actions">
-          <a class="btn btn-secondary" href="project.html?slug=${encodeURIComponent(project.slug)}">${I18N[currentLang].projects_btn_detail}</a>
-          ${createProjectLink(project)}
-        </div>
-      </article>`
+      (mission) => `
+        <article class="mission-card reveal">
+          <span class="mission-code">${mission.code}</span>
+          <h3>${mission.title}</h3>
+          <p>${mission.text}</p>
+        </article>`
     )
     .join("");
+  observeReveals(container);
+}
+
+function renderSkills() {
+  const container = $("#skills-grid");
+  if (!container) return;
+  container.innerHTML = I18N[currentLang].skills
+    .map(
+      (skill) => `
+        <article class="skill-card reveal">
+          <span class="skill-context">${skill.context}</span>
+          <h3>${skill.title}</h3>
+          <p>${skill.description}</p>
+          ${createTags(skill.tags)}
+        </article>`
+    )
+    .join("");
+  observeReveals(container);
+}
+
+function renderTryHackMe() {
+  const stats = $("#thm-stats");
+  const rooms = $("#panel-rooms");
+  const paths = $("#panel-paths");
+  const badges = $("#panel-badges");
+  if (!stats || !rooms || !paths || !badges) return;
+
+  stats.innerHTML = TRYHACKME_DATA.stats
+    .map(
+      (stat) => `
+        <article class="thm-stat">
+          <strong>${currentLang === "en" && stat.value_en ? stat.value_en : stat.value}</strong>
+          <span>${languageValue(stat, "label")}</span>
+          <small>${I18N[currentLang].thm_provisional}</small>
+        </article>`
+    )
+    .join("");
+
+  rooms.innerHTML = `<div class="room-grid">${TRYHACKME_DATA.rooms
+    .map(
+      (room) => `
+        <article class="room-card">
+          <div class="room-head">
+            <span class="room-code">${room.code}</span>
+            <span class="room-date">${currentLang === "en" ? room.date_en : room.date}</span>
+          </div>
+          <h3>${room.name}</h3>
+          <p class="room-category">${languageValue(room, "category")}</p>
+          <p>${languageValue(room, "learning")}</p>
+          ${createTags(room.tools)}
+        </article>`
+    )
+    .join("")}</div>`;
+
+  paths.innerHTML = `<div class="path-grid">${TRYHACKME_DATA.paths
+    .map(
+      (path) => `
+        <article class="path-card">
+          <div class="path-topline"><h3>${path.name}</h3><span class="path-status">${languageValue(path, "status")}</span></div>
+          <p>${languageValue(path, "description")}</p>
+          <div class="progress-track" aria-label="${path.progress}%"><div class="progress-bar" style="width:${path.progress}%"></div></div>
+          <span class="progress-label">${path.progress}% *</span>
+        </article>`
+    )
+    .join("")}</div>`;
+
+  badges.innerHTML = `<div class="badge-grid">${TRYHACKME_DATA.badges
+    .map(
+      (badge) => `
+        <article class="badge-card">
+          <div class="badge-head"><span class="badge-code">${badge.code}</span><span class="room-date">*</span></div>
+          <h3>${languageValue(badge, "name")}</h3>
+          <p>${languageValue(badge, "description")}</p>
+        </article>`
+    )
+    .join("")}</div>`;
+}
+
+function renderSources() {
+  const institutionContainer = $("#institution-list");
+  const channelContainer = $("#channel-list");
+  if (!institutionContainer || !channelContainer) return;
+
+  const render = (items) =>
+    items
+      .map(
+        (item) => `
+          <a class="source-item" href="${item.url}" target="_blank" rel="noopener noreferrer">
+            <span class="source-code" aria-hidden="true">${item.code}</span>
+            <div><strong>${item.name}</strong><p>${languageValue(item, "description")}</p></div>
+            <span class="source-arrow" aria-hidden="true">↗</span>
+          </a>`
+      )
+      .join("");
+
+  institutionContainer.innerHTML = render(WATCH_DATA.institutions);
+  channelContainer.innerHTML = render(WATCH_DATA.channels);
+}
+
+function renderCertifications() {
+  const container = $("#certifications-list");
+  if (!container) return;
+  container.innerHTML = CERTIFICATION_DATA.map(
+    (certification) => `
+      <div class="certification-item">
+        <strong>${certification.name}</strong>
+        <span class="certification-status ${certification.type}">${languageValue(certification, "status")}</span>
+      </div>`
+  ).join("");
+}
+
+function listMarkup(items) {
+  return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
 }
 
 function renderProjectDetail() {
@@ -490,144 +592,224 @@ function renderProjectDetail() {
   const slug = new URLSearchParams(window.location.search).get("slug");
   const project = PROJECTS.find((item) => item.slug === slug);
 
-  if (!slug || !project) {
+  if (!project) {
     container.innerHTML = `
-      <h1>${I18N[currentLang].project_not_found_title}</h1>
-      <p>${I18N[currentLang].project_not_found_text}</p>`;
+      <div class="not-found">
+        <h1>${I18N[currentLang].project_not_found_title}</h1>
+        <p>${I18N[currentLang].project_not_found_text}</p>
+        <a class="btn btn-secondary" href="index.html#projects">${I18N[currentLang].project_back}</a>
+      </div>`;
     return;
   }
 
-  const title = currentLang === "fr" ? project.title_fr : project.title_en;
-  const description = currentLang === "fr" ? project.description_fr : project.description_en;
-  const keyPoints = currentLang === "fr" ? project.keyPoints_fr : project.keyPoints_en;
-  const result = currentLang === "fr" ? project.result_fr : project.result_en;
-  const nextStep = currentLang === "fr" ? project.nextStep_fr : project.nextStep_en;
-
-  document.title = `${title} | Loïc VIDAL-FERRASSE`;
+  const copy = projectCopy(project);
+  document.title = `${copy.title} | Loïc VIDAL-FERRASSE`;
+  const backLink = $("#project-back");
+  if (backLink) backLink.textContent = I18N[currentLang].project_back;
 
   container.innerHTML = `
-    <h1>${title}</h1>
-    <p class="project-meta">${I18N[currentLang].project_category}: ${getCategoryLabel(project.category)}</p>
-    <p>${description}</p>
+    <article class="project-detail">
+      <header class="project-detail-hero reveal">
+        <div class="project-visual tone-${project.tone}" aria-hidden="true"><span>${project.visual}</span></div>
+        <div class="project-detail-copy">
+          <div class="project-topline">
+            <span class="project-category">${categoryLabel(project.category)}</span>
+            <span class="project-status">${copy.status}</span>
+          </div>
+          <h1>${copy.title}</h1>
+          <p>${copy.short}</p>
+          ${createTags(project.technologies)}
+        </div>
+      </header>
 
-    <h2>${I18N[currentLang].project_technologies}</h2>
-    ${createTagList(project.technologies)}
+      <dl class="project-facts reveal">
+        <div><dt>${I18N[currentLang].project_fact_type}</dt><dd>${copy.type}</dd></div>
+        <div><dt>${I18N[currentLang].project_fact_status}</dt><dd>${copy.status}</dd></div>
+        <div><dt>${I18N[currentLang].project_fact_date}</dt><dd>${project.date}</dd></div>
+      </dl>
 
-    <h2>${I18N[currentLang].project_key_points}</h2>
-    <ul>${keyPoints.map((point) => `<li>${point}</li>`).join("")}</ul>
+      <div class="project-story-grid">
+        <section class="story-card story-card--wide reveal"><h2>${I18N[currentLang].project_context}</h2><p>${copy.context}</p></section>
+        <section class="story-card reveal"><h2>${I18N[currentLang].project_objectives}</h2>${listMarkup(copy.objectives)}</section>
+        <section class="story-card reveal"><h2>${I18N[currentLang].project_actions}</h2>${listMarkup(copy.actions)}</section>
+        <section class="story-card reveal"><h2>${I18N[currentLang].project_results}</h2>${listMarkup(copy.results)}</section>
+        <section class="story-card reveal"><h2>${I18N[currentLang].project_challenges}</h2>${listMarkup(copy.challenges)}</section>
+        <section class="story-card reveal"><h2>${I18N[currentLang].project_next}</h2>${listMarkup(copy.nextSteps)}</section>
+        <section class="story-card reveal"><h2>${I18N[currentLang].project_evidence}</h2>${listMarkup(copy.evidence)}</section>
+        <section class="story-card story-card--wide reveal"><h2>${I18N[currentLang].project_technologies}</h2>${createTags(project.technologies)}</section>
+      </div>
+    </article>`;
 
-    <h2>${I18N[currentLang].project_result}</h2>
-    <p>${result}</p>
-
-    <h2>${I18N[currentLang].project_next_step}</h2>
-    <p>${nextStep}</p>`;
-}
-
-function setupNavigation() {
-  const navToggle = $(".nav-toggle");
-  const mainNav = $("#main-nav");
-  if (!navToggle || !mainNav) return;
-
-  navToggle.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  mainNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mainNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
-function setupBackToTop() {
-  const button = $("#back-to-top");
-  if (!button) return;
-
-  const toggleButton = () => {
-    button.classList.toggle("show", window.scrollY > 280);
-  };
-
-  window.addEventListener("scroll", toggleButton);
-  toggleButton();
-
-  button.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
-
-function setupReveal() {
-  if (!("IntersectionObserver" in window)) {
-    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-}
-
-function setupLanguageToggle() {
-  const button = $("#lang-toggle");
-  if (!button) return;
-
-  button.addEventListener("click", () => {
-    currentLang = currentLang === "fr" ? "en" : "fr";
-    localStorage.setItem(LANG_KEY, currentLang);
-
-    applyTranslations();
-    renderSkills();
-    renderExperience();
-    renderCertifications();
-    renderProjectFilters();
-    renderProjects();
-    renderProjectDetail();
-  });
+  observeReveals(container);
 }
 
 function setupProjectSearch() {
   const input = $("#project-search");
   if (!input) return;
-
   input.addEventListener("input", (event) => {
     searchTerm = event.target.value.trim();
     renderProjects();
   });
 }
 
+function setupCyberTabs() {
+  const tabs = $$(".cyber-tab");
+  if (!tabs.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((item) => {
+        const active = item === tab;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-selected", String(active));
+        const panel = $(`#panel-${item.dataset.panel}`);
+        if (panel) panel.hidden = !active;
+      });
+    });
+
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+      event.preventDefault();
+      const offset = event.key === "ArrowRight" ? 1 : -1;
+      const nextIndex = (tabs.indexOf(tab) + offset + tabs.length) % tabs.length;
+      tabs[nextIndex].focus();
+      tabs[nextIndex].click();
+    });
+  });
+}
+
+function setupNavigation() {
+  const toggle = $(".nav-toggle");
+  const nav = $("#main-nav");
+  if (!toggle || !nav) return;
+
+  const close = () => {
+    nav.classList.remove("open");
+    document.body.classList.remove("nav-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", currentLang === "fr" ? "Ouvrir le menu" : "Open menu");
+  };
+
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    document.body.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute(
+      "aria-label",
+      open ? (currentLang === "fr" ? "Fermer le menu" : "Close menu") : currentLang === "fr" ? "Ouvrir le menu" : "Open menu"
+    );
+  });
+
+  $$("a", nav).forEach((link) => link.addEventListener("click", close));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("open")) {
+      close();
+      toggle.focus();
+    }
+  });
+}
+
+function setupActiveNavigation() {
+  if (document.body.dataset.page !== "home" || !("IntersectionObserver" in window)) return;
+  const links = $$("#main-nav a[href^='#']");
+  const sections = links.map((link) => $(link.getAttribute("href"))).filter(Boolean);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((link) => {
+          const active = link.getAttribute("href") === `#${entry.target.id}`;
+          link.classList.toggle("active", active);
+          if (active) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      });
+    },
+    { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+  );
+  sections.forEach((section) => observer.observe(section));
+}
+
+function observeReveals(root = document) {
+  const elements = $$(".reveal:not(.visible)", root);
+  if (!elements.length) return;
+
+  const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    elements.forEach((element) => element.classList.add("visible"));
+    return;
+  }
+
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -40px" }
+    );
+  }
+
+  elements.forEach((element) => revealObserver.observe(element));
+}
+
+function setupLanguageToggle() {
+  const button = $("#lang-toggle");
+  if (!button) return;
+  button.addEventListener("click", () => {
+    currentLang = currentLang === "fr" ? "en" : "fr";
+    localStorage.setItem(LANG_KEY, currentLang);
+    applyTranslations();
+    renderProjectFilters();
+    renderProjects();
+    renderMissions();
+    renderSkills();
+    renderTryHackMe();
+    renderSources();
+    renderCertifications();
+    renderProjectDetail();
+    observeReveals();
+  });
+}
+
+function setupBackToTop() {
+  const button = $("#back-to-top");
+  if (!button) return;
+  const update = () => button.classList.toggle("show", window.scrollY > 500);
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+  button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+}
+
 function setupFooterYear() {
-  const yearNode = $("#year");
-  if (yearNode) yearNode.textContent = new Date().getFullYear();
+  const year = $("#year");
+  if (year) year.textContent = new Date().getFullYear();
 }
 
 function init() {
   if (!["fr", "en"].includes(currentLang)) currentLang = "fr";
 
   applyTranslations();
-  setupNavigation();
-  setupLanguageToggle();
-  setupBackToTop();
-  setupReveal();
-  setupFooterYear();
-
-  renderSkills();
-  renderExperience();
-  renderCertifications();
   renderProjectFilters();
   renderProjects();
-  setupProjectSearch();
+  renderMissions();
+  renderSkills();
+  renderTryHackMe();
+  renderSources();
+  renderCertifications();
   renderProjectDetail();
+
+  setupNavigation();
+  setupActiveNavigation();
+  setupLanguageToggle();
+  setupProjectSearch();
+  setupCyberTabs();
+  setupBackToTop();
+  setupFooterYear();
+  observeReveals();
 }
 
 document.addEventListener("DOMContentLoaded", init);

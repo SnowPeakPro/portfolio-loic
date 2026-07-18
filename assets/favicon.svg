@@ -1,4 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#081426"/>
-  <path d="M18 45V19h8v19h20v7z" fill="#31c8ff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LVF">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12304a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="16" y1="18" x2="49" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59e1c1"/>
+      <stop offset="1" stop-color="#65b8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <rect x="5.5" y="5.5" width="53" height="53" rx="11" fill="none" stroke="#59e1c1" stroke-opacity=".28"/>
+  <path d="M16 18v28h17v-6H23V18h-7Zm17 0 7 28h7l7-28h-7l-3.5 18.5L40 18h-7Z" fill="url(#mark)"/>
 </svg>

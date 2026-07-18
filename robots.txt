@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://snowpeakpro.github.io/portfolio-loic/sitemap.xml
+
