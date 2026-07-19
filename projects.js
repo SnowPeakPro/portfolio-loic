@@ -282,88 +282,123 @@ const PROJECTS = [
   {
     slug: "infrastructure-reseau-securisee",
     category: "Cybersécurité",
-    visual: "VPN",
+    visual: "WIC",
     tone: "green",
-    technologies: ["nftables", "OpenVPN", "PKI", "Squid", "Nginx", "TLS"],
-    date: "2026",
+    technologies: [
+      "Windows Server 2025",
+      "Active Directory",
+      "GPO / LAPS",
+      "PKI / LDAPS",
+      "Stormshield",
+      "VLAN / DMZ",
+      "MySQL TLS",
+      "StrongSwan / IPsec"
+    ],
+    date: "06/2026",
     featured: true,
     link: "",
     copy: {
       fr: {
-        title: "Infrastructure réseau sécurisée",
-        status: "Réalisé en formation",
-        type: "Projet académique",
+        title: "Infrastructure Windows sécurisée — Wichita",
+        status: "SAE 4.CYBER.01 terminée",
+        type: "Projet académique en binôme",
         short:
-          "Déploiement progressif de mécanismes de filtrage, d’un accès distant sécurisé et de services proxy dans une architecture de laboratoire.",
+          "Conception et sécurisation d’un système d’information de filiale : Active Directory redondant, PKI, GPO, segmentation VLAN/DMZ, filtrage, réplication SQL chiffrée et VPN IPsec.",
         context:
-          "Les travaux pratiques de la ressource Infrastructures de sécurité ont servi à construire et vérifier plusieurs briques courantes d’une passerelle sécurisée : filtrage, traduction d’adresses, chiffrement des flux et contrôle des accès Web.",
+          "Dans le cadre de la SAE 4.CYBER.01 « Sécuriser un système d’information », nous avons conçu en binôme l’infrastructure de la filiale fictive Wichita, intégrée à une entreprise multi-sites. La maquette associait des serveurs Windows Server 2025 virtualisés, des clients Windows 11, un switch manageable, un pare-feu Stormshield et un routeur Linux. Le projet devait faire fonctionner ensemble l’annuaire, les services réseau et applicatifs, puis vérifier les mesures de sécurité par des scénarios de test documentés.",
         objectives: [
-          "Mettre en œuvre un filtrage réseau stateful.",
-          "Configurer un accès distant chiffré avec certificats.",
-          "Comprendre le rôle d’une PKI et vérifier l’identité des pairs.",
-          "Déployer un proxy direct et un reverse proxy HTTPS."
+          "Déployer un domaine Active Directory redondant avec deux contrôleurs de domaine et DNS.",
+          "Centraliser la configuration des utilisateurs et des postes avec les OU, groupes, GPO et LAPS.",
+          "Chiffrer les échanges sensibles au moyen d’une PKI, de LDAPS, HTTPS, TLS et IPsec.",
+          "Segmenter le réseau par VLAN et DMZ, puis n’autoriser que les flux nécessaires.",
+          "Vérifier la continuité de service, les droits d’accès et l’efficacité des protections."
         ],
         actions: [
-          "Création de règles nftables pour le filtrage, le NAT, le SNAT et le DNAT.",
-          "Génération et utilisation de certificats pour un tunnel OpenVPN.",
-          "Vérification des échanges avec tcpdump et Wireshark.",
-          "Configuration de Squid pour le proxy et l’analyse des journaux.",
-          "Configuration de Nginx comme reverse proxy avec terminaison TLS."
+          "Déploiement d’un domaine Active Directory sur deux contrôleurs, puis validation de la réplication AD/DNS.",
+          "Mise en place du DHCP, des comptes, groupes et OU, puis intégration des postes Windows 11 au domaine.",
+          "Application de GPO de sécurité : complexité et verrouillage des comptes, pare-feu, journalisation, restrictions CMD/PowerShell et LAPS.",
+          "Déploiement d’une autorité de certification et sécurisation de LDAPS, IIS/HTTPS et RDP par certificats.",
+          "Configuration des VLAN, de la DMZ, des règles Stormshield et des fonctions NAT/DNAT sur le routeur Linux.",
+          "Sécurisation de MySQL par TLS, réplication entre deux serveurs SQL et intégration à l’intranet.",
+          "Mise en place d’un tunnel intersite IPsec IKEv2 avec StrongSwan et analyse des flux avec Wireshark et tcpdump."
         ],
         results: [
-          "Flux autorisés et interdits vérifiés par des tests ciblés.",
-          "Tunnel VPN établi dans l’environnement de laboratoire.",
-          "Lecture et interprétation des journaux proxy et des captures réseau."
+          "Redondance AD/DNS et attribution DHCP validées dans la maquette.",
+          "Accès aux partages et à l’administration limités selon les groupes et les permissions.",
+          "Isolation confirmée entre la DMZ et le réseau interne grâce aux VLAN et au filtrage Stormshield.",
+          "Chiffrement vérifié pour LDAPS, HTTPS, MySQL, RDP en TLS 1.3 et le tunnel IPsec.",
+          "Réplication MySQL opérationnelle et 19 scénarios de sécurité documentés."
         ],
         challenges: [
-          "Diagnostiquer les erreurs de négociation TLS et les paquets de contrôle non routables.",
-          "Faire correspondre les règles de filtrage à une matrice de flux précise.",
-          "Distinguer les responsabilités du proxy, du reverse proxy et du pare-feu."
+          "Faire interagir correctement AD, DNS, DHCP, PKI, IIS, SQL et les équipements réseau.",
+          "Construire une chaîne de certificats utilisable par plusieurs services et postes du domaine.",
+          "Définir les règles de flux sans compromettre le fonctionnement de l’intranet, de la DMZ et du VPN.",
+          "Adapter l’architecture aux ressources disponibles, avec certains rôles regroupés dans la maquette."
         ],
         nextSteps: [
-          "Reproduire l’architecture dans le futur laboratoire personnel.",
-          "Ajouter une supervision centralisée des journaux.",
-          "Comparer plusieurs stratégies de durcissement TLS."
+          "Séparer les rôles critiques comme la PKI, les services Web, les bases de données et les partages.",
+          "Centraliser les journaux et ajouter une supervision plus complète de l’infrastructure.",
+          "Mettre en place des sauvegardes régulières et tester leur restauration.",
+          "Poursuivre le durcissement des serveurs et confronter la maquette à un audit plus approfondi."
         ],
-        evidence: ["Configurations nftables", "Captures OpenVPN", "Journaux Squid", "Configuration Nginx"]
+        evidence: [
+          "Document technique complet et schéma global de l’infrastructure",
+          "Captures de déploiement AD/DNS, GPO, LAPS, PKI et certificats",
+          "Configurations du switch Cisco, du Stormshield et du routeur Linux",
+          "Captures Wireshark et tcpdump des flux LDAPS, TLS et IPsec",
+          "Résultats des 19 scénarios de validation de sécurité"
+        ]
       },
       en: {
-        title: "Secure network infrastructure",
-        status: "Completed during training",
-        type: "Academic project",
+        title: "Secure Windows infrastructure — Wichita",
+        status: "SAE 4.CYBER.01 completed",
+        type: "Academic team project",
         short:
-          "Progressive deployment of filtering, secure remote access, and proxy services in a laboratory architecture.",
+          "Design and security of a branch information system: redundant Active Directory, PKI, Group Policy, VLAN/DMZ segmentation, filtering, encrypted SQL replication, and an IPsec VPN.",
         context:
-          "Security Infrastructure practical work was used to build and verify common security gateway components: filtering, address translation, encrypted traffic, and web access control.",
+          "As part of the SAE 4.CYBER.01 project on securing an information system, we designed the infrastructure of the fictional Wichita branch as a two-person team within a multi-site company. The lab combined virtualized Windows Server 2025 systems, Windows 11 clients, a managed switch, a Stormshield firewall, and a Linux router. The project integrated directory, network, and application services before validating the security controls through documented test scenarios.",
         objectives: [
-          "Implement stateful network filtering.",
-          "Configure certificate-based encrypted remote access.",
-          "Understand PKI and peer identity verification.",
-          "Deploy a forward proxy and HTTPS reverse proxy."
+          "Deploy a redundant Active Directory domain with two domain controllers and DNS.",
+          "Centrally manage users and workstations through OUs, groups, Group Policy, and LAPS.",
+          "Encrypt sensitive communications using PKI, LDAPS, HTTPS, TLS, and IPsec.",
+          "Segment the network with VLANs and a DMZ, allowing only required traffic.",
+          "Validate service continuity, access rights, and the effectiveness of the security controls."
         ],
         actions: [
-          "Created nftables rules for filtering, NAT, SNAT, and DNAT.",
-          "Generated and used certificates for an OpenVPN tunnel.",
-          "Verified traffic with tcpdump and Wireshark.",
-          "Configured Squid and analyzed its logs.",
-          "Configured Nginx as a reverse proxy with TLS termination."
+          "Deployed an Active Directory domain on two controllers and validated AD/DNS replication.",
+          "Configured DHCP, accounts, groups, and OUs, then joined Windows 11 workstations to the domain.",
+          "Applied security policies for password complexity, account lockout, firewalling, logging, CMD/PowerShell restrictions, and LAPS.",
+          "Deployed a certificate authority and secured LDAPS, IIS/HTTPS, and RDP with certificates.",
+          "Configured VLANs, the DMZ, Stormshield rules, and NAT/DNAT functions on the Linux router.",
+          "Enforced TLS for MySQL, replicated data between two SQL servers, and connected the database to the intranet.",
+          "Established a site-to-site IKEv2 IPsec tunnel with StrongSwan and analyzed traffic with Wireshark and tcpdump."
         ],
         results: [
-          "Allowed and denied flows verified through targeted tests.",
-          "VPN tunnel established in the lab environment.",
-          "Proxy logs and network captures interpreted."
+          "AD/DNS redundancy and DHCP assignment validated in the lab.",
+          "File-share and administration access limited according to groups and permissions.",
+          "Isolation between the DMZ and internal network confirmed through VLANs and Stormshield filtering.",
+          "Encryption verified for LDAPS, HTTPS, MySQL, RDP over TLS 1.3, and the IPsec tunnel.",
+          "MySQL replication operational and 19 security validation scenarios documented."
         ],
         challenges: [
-          "Troubleshooting TLS negotiation and unroutable control packets.",
-          "Matching filtering rules to an exact flow matrix.",
-          "Separating the roles of firewall, proxy, and reverse proxy."
+          "Integrating AD, DNS, DHCP, PKI, IIS, SQL, and network devices coherently.",
+          "Building a certificate chain usable by several domain services and workstations.",
+          "Defining traffic rules without disrupting the intranet, DMZ, and VPN.",
+          "Adapting the architecture to available resources, with some roles combined in the lab."
         ],
         nextSteps: [
-          "Reproduce the architecture in the future personal lab.",
-          "Add centralized log monitoring.",
-          "Compare multiple TLS hardening strategies."
+          "Separate critical roles such as PKI, web services, databases, and file services.",
+          "Centralize logs and add more complete infrastructure monitoring.",
+          "Implement regular backups and test restoration procedures.",
+          "Harden the servers further and submit the lab to a deeper security audit."
         ],
-        evidence: ["nftables configurations", "OpenVPN captures", "Squid logs", "Nginx configuration"]
+        evidence: [
+          "Complete technical report and global architecture diagram",
+          "AD/DNS, Group Policy, LAPS, PKI, and certificate deployment captures",
+          "Cisco switch, Stormshield, and Linux router configurations",
+          "Wireshark and tcpdump captures of LDAPS, TLS, and IPsec traffic",
+          "Results from 19 security validation scenarios"
+        ]
       }
     }
   }
