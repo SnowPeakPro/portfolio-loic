@@ -55,15 +55,17 @@ const I18N = {
     cyber_kicker: "Cyber lab",
     cyber_title: "Une pratique régulière sur TryHackMe",
     cyber_intro: "Des laboratoires pour renforcer mes connaissances et manipuler des outils dans un environnement autorisé.",
-    provisional_title: "Données en cours de mise à jour",
-    provisional_text:
-      "le parcours Pre Security est vérifié. Les rooms, badges et autres parcours marqués d’un astérisque restent provisoires.",
+    thm_snapshot_title: "Données vérifiées",
+    thm_snapshot_text: "statistiques, rooms et badges issus du profil public TryHackMe.",
     thm_profile_text: "Pratique personnelle d’environ cinq sessions par semaine.",
     thm_profile_link: "Ouvrir le profil public ↗",
+    thm_rank: "Rang",
+    thm_points: "points",
+    thm_updated: "Mis à jour le",
     thm_tab_rooms: "Rooms marquantes",
     thm_tab_paths: "Parcours",
     thm_tab_badges: "Badges",
-    thm_provisional: "provisoire",
+    thm_badge_earned: "Obtenu",
     thm_certificate_link: "Consulter le certificat (PDF) ↗",
     thm_certificate_alt: "Aperçu du certificat TryHackMe Pre Security obtenu par SnowPeakPro",
     thm_certificate_id: "Identifiant",
@@ -230,15 +232,17 @@ const I18N = {
     cyber_kicker: "Cyber lab",
     cyber_title: "Regular hands-on practice on TryHackMe",
     cyber_intro: "Labs used to strengthen my knowledge and practice tools in an authorized environment.",
-    provisional_title: "Data being updated",
-    provisional_text:
-      "the Pre Security path is verified. Rooms, badges, and other paths marked with an asterisk remain provisional.",
+    thm_snapshot_title: "Verified data",
+    thm_snapshot_text: "statistics, rooms, and badges taken from the public TryHackMe profile.",
     thm_profile_text: "Personal practice averaging around five sessions per week.",
     thm_profile_link: "Open public profile ↗",
+    thm_rank: "Rank",
+    thm_points: "points",
+    thm_updated: "Updated on",
     thm_tab_rooms: "Selected rooms",
     thm_tab_paths: "Learning paths",
     thm_tab_badges: "Badges",
-    thm_provisional: "provisional",
+    thm_badge_earned: "Earned",
     thm_certificate_link: "View certificate (PDF) ↗",
     thm_certificate_alt: "Preview of SnowPeakPro's TryHackMe Pre Security certificate",
     thm_certificate_id: "Certificate ID",
@@ -505,7 +509,18 @@ function renderTryHackMe() {
   const rooms = $("#panel-rooms");
   const paths = $("#panel-paths");
   const badges = $("#panel-badges");
+  const rank = $("#thm-rank");
+  const points = $("#thm-points");
+  const updated = $("#thm-updated");
   if (!stats || !rooms || !paths || !badges) return;
+
+  if (rank) rank.textContent = `${I18N[currentLang].thm_rank} ${TRYHACKME_DATA.rank}`;
+  if (points) points.textContent = `${TRYHACKME_DATA.points.toLocaleString(currentLang === "fr" ? "fr-FR" : "en-US")} ${I18N[currentLang].thm_points}`;
+  if (updated) {
+    const updatedAt = currentLang === "en" ? TRYHACKME_DATA.updatedAt_en : TRYHACKME_DATA.updatedAt;
+    updated.textContent = `${I18N[currentLang].thm_updated} ${updatedAt}`;
+    updated.dateTime = TRYHACKME_DATA.updatedAtISO;
+  }
 
   stats.innerHTML = TRYHACKME_DATA.stats
     .map(
@@ -513,7 +528,7 @@ function renderTryHackMe() {
         <article class="thm-stat">
           <strong>${currentLang === "en" && stat.value_en ? stat.value_en : stat.value}</strong>
           <span>${languageValue(stat, "label")}</span>
-          <small class="${stat.verified ? "verified" : ""}">${languageValue(stat, "note") || I18N[currentLang].thm_provisional}</small>
+          <small class="${stat.verified ? "verified" : ""}">${languageValue(stat, "note") || ""}</small>
         </article>`
     )
     .join("");
@@ -524,12 +539,12 @@ function renderTryHackMe() {
         <article class="room-card">
           <div class="room-head">
             <span class="room-code">${room.code}</span>
-            <span class="room-date">${currentLang === "en" ? room.date_en : room.date}</span>
+            <span class="room-status">${languageValue(room, "status")}</span>
           </div>
           <h3>${room.name}</h3>
           <p class="room-category">${languageValue(room, "category")}</p>
           <p>${languageValue(room, "learning")}</p>
-          ${createTags(room.tools)}
+          ${createTags(currentLang === "en" && room.tools_en ? room.tools_en : room.tools)}
         </article>`
     )
     .join("")}</div>`;
@@ -576,7 +591,7 @@ function renderTryHackMe() {
     .map(
       (badge) => `
         <article class="badge-card">
-          <div class="badge-head"><span class="badge-code">${badge.code}</span><span class="room-date">*</span></div>
+          <div class="badge-head"><span class="badge-code" aria-hidden="true">${badge.code}</span><span class="badge-status">${I18N[currentLang].thm_badge_earned}</span></div>
           <h3>${languageValue(badge, "name")}</h3>
           <p>${languageValue(badge, "description")}</p>
         </article>`
