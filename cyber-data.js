@@ -1,116 +1,151 @@
 /*
  * DONNÉES TRYHACKME
  * -----------------
- * Le parcours Pre Security et les chiffres associés sont vérifiés à partir du
- * certificat obtenu le 21/07/2026. Les autres parcours, rooms, badges et
- * objectifs marqués d'un astérisque restent des valeurs provisoires.
+ * Les statistiques, rooms et badges ci-dessous ont été vérifiés à partir du
+ * profil public SnowPeakPro le 21/07/2026. Les informations du parcours
+ * Pre Security sont également confirmées par le certificat obtenu ce jour-là.
  */
 
 const TRYHACKME_DATA = {
   username: "SnowPeakPro",
   profileUrl: "https://tryhackme.com/p/SnowPeakPro",
   updatedAt: "21/07/2026",
+  updatedAt_en: "21 July 2026",
+  updatedAtISO: "2026-07-21",
+  rank: "[0x6][VOYAGER]",
+  points: 2982,
   stats: [
     {
-      value: "31",
-      label_fr: "laboratoires Pre Security",
-      label_en: "Pre Security labs",
-      note_fr: "certificat vérifié",
-      note_en: "verified certificate",
+      value: "39",
+      label_fr: "rooms terminées",
+      label_en: "completed rooms",
+      note_fr: "profil public",
+      note_en: "public profile",
       verified: true
     },
     {
-      value: "7",
-      label_fr: "modules terminés",
-      label_en: "completed modules",
-      note_fr: "parcours terminé",
-      note_en: "path completed",
+      value: "6",
+      label_fr: "badges obtenus",
+      label_en: "earned badges",
+      note_fr: "profil public",
+      note_en: "public profile",
       verified: true
     },
     {
-      value: "19 h 10",
-      value_en: "19h 10m",
-      label_fr: "durée du parcours",
-      label_en: "learning-path duration",
-      note_fr: "Pre Security",
-      note_en: "Pre Security",
+      value: "Top 20 %",
+      value_en: "Top 20%",
+      label_fr: "classement global",
+      label_en: "global ranking",
+      note_fr: "au 21/07/2026",
+      note_en: "as of 21 July 2026",
       verified: true
     },
     {
-      value: "≈ 5 / sem.",
-      value_en: "≈ 5 / week",
-      label_fr: "sessions habituelles",
-      label_en: "usual sessions",
-      note_fr: "pratique personnelle",
-      note_en: "personal practice"
+      value: "13 jours",
+      value_en: "13 days",
+      label_fr: "série actuelle",
+      label_en: "current streak",
+      note_fr: "au 21/07/2026",
+      note_en: "as of 21 July 2026",
+      verified: true
     }
   ],
   rooms: [
     {
-      name: "Nmap: The Basics",
-      code: "NMAP",
-      date: "Juillet 2026*",
-      date_en: "July 2026*",
-      category_fr: "Réseau et reconnaissance",
-      category_en: "Networking and reconnaissance",
-      learning_fr: "Découverte des hôtes, analyse des ports et interprétation des résultats de scan.",
-      learning_en: "Host discovery, port analysis, and scan result interpretation.",
-      tools: ["Nmap", "TCP/IP", "Linux"]
+      name: "Linux Fundamentals Parts 1–3",
+      code: "LNX",
+      status_fr: "3 rooms terminées",
+      status_en: "3 rooms completed",
+      category_fr: "Linux et ligne de commande",
+      category_en: "Linux and command line",
+      learning_fr: "Utilisation du terminal Linux, navigation dans les fichiers et découverte d’utilitaires courants.",
+      learning_en: "Using the Linux terminal, navigating files, and discovering common utilities.",
+      tools: ["Linux", "CLI", "Shell"],
+      tools_en: ["Linux", "CLI", "Shell"]
     },
     {
-      name: "Active Directory Basics",
-      code: "AD",
-      date: "Juillet 2026*",
-      date_en: "July 2026*",
-      category_fr: "Windows et identités",
-      category_en: "Windows and identity",
-      learning_fr: "Organisation d’un domaine, objets Active Directory, authentification et stratégies de groupe.",
-      learning_en: "Domain organization, Active Directory objects, authentication, and Group Policy.",
-      tools: ["AD DS", "Kerberos", "GPO"]
+      name: "What is Networking?",
+      code: "NET",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Fondamentaux réseau",
+      category_en: "Networking fundamentals",
+      learning_fr: "Compréhension des bases d’un réseau informatique et de la communication entre équipements.",
+      learning_en: "Understanding computer-network fundamentals and communication between devices.",
+      tools: ["Réseau", "TCP/IP", "Topologies"],
+      tools_en: ["Networking", "TCP/IP", "Topologies"]
     },
     {
-      name: "Linux PrivEsc",
-      code: "LPE",
-      date: "Juin 2026*",
-      date_en: "June 2026*",
-      category_fr: "Linux et élévation de privilèges",
-      category_en: "Linux and privilege escalation",
-      learning_fr: "Recherche de mauvaises configurations, permissions sensibles et chemins d’élévation locaux.",
-      learning_en: "Finding misconfigurations, sensitive permissions, and local escalation paths.",
-      tools: ["Linux", "Bash", "SUID"]
+      name: "DNS in Detail",
+      code: "DNS",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Services réseau",
+      category_en: "Network services",
+      learning_fr: "Fonctionnement du DNS et rôle de la résolution de noms pour accéder aux services Internet.",
+      learning_en: "How DNS works and how name resolution provides access to Internet services.",
+      tools: ["DNS", "Résolution de noms", "Internet"],
+      tools_en: ["DNS", "Name resolution", "Internet"]
     },
     {
-      name: "OWASP Top 10 – 2021",
-      code: "WEB",
-      date: "Juin 2026*",
-      date_en: "June 2026*",
-      category_fr: "Sécurité des applications Web",
-      category_en: "Web application security",
-      learning_fr: "Compréhension des principales familles de vulnérabilités Web et de leurs remédiations.",
-      learning_en: "Understanding major web vulnerability families and their remediation.",
-      tools: ["HTTP", "Burp Suite", "OWASP"]
+      name: "HTTP in Detail",
+      code: "HTTP",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Protocoles Web",
+      category_en: "Web protocols",
+      learning_fr: "Structure d’une requête HTTP et échanges entre un client Web et un serveur.",
+      learning_en: "HTTP request structure and exchanges between a web client and a server.",
+      tools: ["HTTP", "Requêtes", "Web"],
+      tools_en: ["HTTP", "Requests", "Web"]
     },
     {
-      name: "Splunk: Exploring SPL",
-      code: "SPL",
-      date: "Mai 2026*",
-      date_en: "May 2026*",
-      category_fr: "Blue Team et analyse de journaux",
-      category_en: "Blue Team and log analysis",
-      learning_fr: "Création de recherches SPL pour filtrer, corréler et interpréter des événements de sécurité.",
-      learning_en: "Writing SPL searches to filter, correlate, and interpret security events.",
-      tools: ["Splunk", "SPL", "Logs"]
+      name: "Operating System Security",
+      code: "OS",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Sécurité des systèmes",
+      category_en: "Operating-system security",
+      learning_fr: "Gestion des utilisateurs, sécurité d’un système d’exploitation et authentification SSH sous Linux.",
+      learning_en: "User management, operating-system security, and SSH authentication on Linux.",
+      tools: ["Linux", "SSH", "Comptes"],
+      tools_en: ["Linux", "SSH", "Accounts"]
     },
     {
-      name: "Windows Forensics 1",
-      code: "DFIR",
-      date: "Mai 2026*",
-      date_en: "May 2026*",
-      category_fr: "Investigation numérique",
-      category_en: "Digital forensics",
-      learning_fr: "Identification d’artefacts Windows utiles pour reconstruire une activité sur un poste.",
-      learning_en: "Identifying Windows artifacts used to reconstruct activity on a workstation.",
-      tools: ["Windows", "Registry", "Event Logs"]
+      name: "Web Application Security",
+      code: "WAS",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Sécurité Web",
+      category_en: "Web security",
+      learning_fr: "Fonctionnement des applications Web et introduction aux problèmes de sécurité courants.",
+      learning_en: "How web applications work and an introduction to common security issues.",
+      tools: ["Applications Web", "Vulnérabilités", "Sécurité"],
+      tools_en: ["Web applications", "Vulnerabilities", "Security"]
+    },
+    {
+      name: "Cryptography Concepts",
+      code: "CRY",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Cryptographie",
+      category_en: "Cryptography",
+      learning_fr: "Compréhension du rôle de la cryptographie dans les usages numériques quotidiens.",
+      learning_en: "Understanding the role of cryptography in everyday digital use.",
+      tools: ["Confidentialité", "Intégrité", "Cryptographie"],
+      tools_en: ["Confidentiality", "Integrity", "Cryptography"]
+    },
+    {
+      name: "Defensive Security Intro",
+      code: "BLUE",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Sécurité défensive",
+      category_en: "Defensive security",
+      learning_fr: "Introduction à la Threat Intelligence, au SOC, au DFIR, à l’analyse de malwares et au SIEM.",
+      learning_en: "Introduction to Threat Intelligence, SOC, DFIR, malware analysis, and SIEM.",
+      tools: ["SOC", "DFIR", "SIEM"],
+      tools_en: ["SOC", "DFIR", "SIEM"]
     }
   ],
   paths: [
@@ -132,74 +167,50 @@ const TRYHACKME_DATA = {
       certificatePreview: "assets/certifications/tryhackme-pre-security.webp",
       certificateId: "THM-BQXGMJ7MKZ",
       verified: true
-    },
-    {
-      name: "Cyber Security 101",
-      progress: 72,
-      status_fr: "En cours*",
-      status_en: "In progress*",
-      description_fr: "Vue d’ensemble des métiers, techniques et outils cyber.",
-      description_en: "Overview of cybersecurity roles, techniques, and tools."
-    },
-    {
-      name: "Jr Penetration Tester",
-      progress: 46,
-      status_fr: "En cours*",
-      status_en: "In progress*",
-      description_fr: "Méthodologie de test d’intrusion et exploitation encadrée.",
-      description_en: "Penetration-testing methodology and guided exploitation."
-    },
-    {
-      name: "SOC Level 1",
-      progress: 31,
-      status_fr: "En cours*",
-      status_en: "In progress*",
-      description_fr: "Analyse de journaux, détection et traitement d’alertes.",
-      description_en: "Log analysis, detection, and alert handling."
     }
   ],
   badges: [
     {
-      code: "NET",
-      name_fr: "Networking",
-      name_en: "Networking",
-      description_fr: "Fondamentaux réseau et analyse des services exposés.",
-      description_en: "Networking fundamentals and exposed-service analysis."
+      code: "04",
+      name_fr: "First Four",
+      name_en: "First Four",
+      description_fr: "Quatre rooms terminées pendant ma première semaine sur la plateforme.",
+      description_en: "Four rooms completed during my first week on the platform."
     },
     {
-      code: "LNX",
-      name_fr: "Linux",
-      name_en: "Linux",
-      description_fr: "Navigation, permissions et administration de base.",
-      description_en: "Navigation, permissions, and basic administration."
+      code: ">_",
+      name_fr: "cat linux.txt",
+      name_en: "cat linux.txt",
+      description_fr: "Compétences fondamentales validées dans l’utilisation de Linux.",
+      description_en: "Fundamental Linux skills validated through completed rooms."
+    },
+    {
+      code: "NET",
+      name_fr: "Networking Nerd",
+      name_en: "Networking Nerd",
+      description_fr: "Badge obtenu après avoir terminé le module Network Fundamentals.",
+      description_en: "Badge earned after completing the Network Fundamentals module."
     },
     {
       code: "WEB",
-      name_fr: "Web Security",
-      name_en: "Web Security",
-      description_fr: "Vulnérabilités Web courantes et principes de remédiation.",
-      description_en: "Common web vulnerabilities and remediation principles."
+      name_fr: "Webbed",
+      name_en: "Webbed",
+      description_fr: "Compréhension du fonctionnement général du Web.",
+      description_en: "Understanding of how the World Wide Web works."
     },
     {
-      code: "AD",
-      name_fr: "Active Directory",
-      name_en: "Active Directory",
-      description_fr: "Identités, authentification et environnement de domaine.",
-      description_en: "Identity, authentication, and domain environments."
+      code: "WWW",
+      name_fr: "World Wide Web",
+      name_en: "World Wide Web",
+      description_fr: "Badge obtenu après avoir terminé le module How the Web Works.",
+      description_en: "Badge earned after completing the How the Web Works module."
     },
     {
-      code: "BT",
-      name_fr: "Blue Team",
-      name_en: "Blue Team",
-      description_fr: "Collecte, recherche et analyse d’événements de sécurité.",
-      description_en: "Security event collection, search, and analysis."
-    },
-    {
-      code: "PT",
-      name_fr: "Pentesting",
-      name_en: "Pentesting",
-      description_fr: "Reconnaissance, énumération et méthodologie d’audit.",
-      description_en: "Reconnaissance, enumeration, and audit methodology."
+      code: "7D",
+      name_fr: "7 Day Streak",
+      name_en: "7 Day Streak",
+      description_fr: "Série d’apprentissage de sept jours consécutifs atteinte.",
+      description_en: "Seven-day consecutive learning streak achieved."
     }
   ]
 };
