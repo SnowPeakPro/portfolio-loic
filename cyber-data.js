@@ -1,20 +1,49 @@
 /*
- * CONTENU PROVISOIRE
- * -------------------
- * Les statistiques, rooms, parcours, badges et statuts de certification de ce
- * fichier sont des valeurs de démonstration. Ils seront remplacés par les
- * informations réelles fournies par Loïc avant la publication définitive.
+ * DONNÉES TRYHACKME
+ * -----------------
+ * Le parcours Pre Security et les chiffres associés sont vérifiés à partir du
+ * certificat obtenu le 21/07/2026. Les autres parcours, rooms, badges et
+ * objectifs marqués d'un astérisque restent des valeurs provisoires.
  */
 
 const TRYHACKME_DATA = {
   username: "SnowPeakPro",
   profileUrl: "https://tryhackme.com/p/SnowPeakPro",
-  updatedAt: "18/07/2026",
+  updatedAt: "21/07/2026",
   stats: [
-    { value: "48", label_fr: "rooms terminées", label_en: "completed rooms" },
-    { value: "8", label_fr: "badges obtenus", label_en: "earned badges" },
-    { value: "Top 15 %", label_fr: "classement global", label_en: "global ranking" },
-    { value: "27 jours", value_en: "27 days", label_fr: "meilleure série", label_en: "best streak" }
+    {
+      value: "31",
+      label_fr: "laboratoires Pre Security",
+      label_en: "Pre Security labs",
+      note_fr: "certificat vérifié",
+      note_en: "verified certificate",
+      verified: true
+    },
+    {
+      value: "7",
+      label_fr: "modules terminés",
+      label_en: "completed modules",
+      note_fr: "parcours terminé",
+      note_en: "path completed",
+      verified: true
+    },
+    {
+      value: "19 h 10",
+      value_en: "19h 10m",
+      label_fr: "durée du parcours",
+      label_en: "learning-path duration",
+      note_fr: "Pre Security",
+      note_en: "Pre Security",
+      verified: true
+    },
+    {
+      value: "≈ 5 / sem.",
+      value_en: "≈ 5 / week",
+      label_fr: "sessions habituelles",
+      label_en: "usual sessions",
+      note_fr: "pratique personnelle",
+      note_en: "personal practice"
+    }
   ],
   rooms: [
     {
@@ -88,10 +117,21 @@ const TRYHACKME_DATA = {
     {
       name: "Pre Security",
       progress: 100,
-      status_fr: "Terminé*",
-      status_en: "Completed*",
-      description_fr: "Fondamentaux réseau, Web, Linux et Windows.",
-      description_en: "Networking, web, Linux, and Windows fundamentals."
+      status_fr: "Terminé le 21/07/2026",
+      status_en: "Completed on 21 July 2026",
+      description_fr:
+        "Parcours d'introduction couvrant le fonctionnement d'un ordinateur, les premières lignes de code, les bases des réseaux et du Web, ainsi que les principes d'attaque et de défense.",
+      description_en:
+        "Introductory learning path covering how computers work, first lines of code, networking and web fundamentals, and attacker and defender principles.",
+      facts: [
+        { value: "19 h 10", label_fr: "de formation", label_en: "of learning" },
+        { value: "7", label_fr: "modules", label_en: "modules" },
+        { value: "31", label_fr: "laboratoires pratiques", label_en: "hands-on labs" }
+      ],
+      certificateUrl: "assets/certifications/tryhackme-pre-security.pdf",
+      certificatePreview: "assets/certifications/tryhackme-pre-security.webp",
+      certificateId: "THM-BQXGMJ7MKZ",
+      verified: true
     },
     {
       name: "Cyber Security 101",
@@ -249,6 +289,17 @@ const WATCH_DATA = {
 };
 
 const CERTIFICATION_DATA = [
+  {
+    name: "TryHackMe — Pre Security Learning Path",
+    status_fr: "Obtenu",
+    status_en: "Earned",
+    meta_fr: "Certificat de fin de parcours • 21 juillet 2026 • 19 h 10",
+    meta_en: "Learning-path completion certificate • 21 July 2026 • 19h 10m",
+    linkLabel_fr: "Consulter le certificat (PDF) ↗",
+    linkLabel_en: "View certificate (PDF) ↗",
+    url: "assets/certifications/tryhackme-pre-security.pdf",
+    type: "earned"
+  },
   {
     name: "Cisco Introduction to Cybersecurity",
     status_fr: "À confirmer",

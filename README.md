@@ -11,9 +11,11 @@ Portfolio professionnel statique présentant mon parcours en BUT Réseaux & Tél
 - version française et anglaise ;
 - mise en page responsive et accessible au clavier.
 
-## Données provisoires
+## Données TryHackMe
 
-Les statistiques, rooms, parcours, badges TryHackMe et statuts de certification sont regroupés dans `cyber-data.js`. Les valeurs actuellement présentes servent à valider la mise en page et doivent être remplacées par les données réelles avant publication définitive.
+Les statistiques, rooms, parcours, badges TryHackMe et statuts de certification sont regroupés dans `cyber-data.js`. Le parcours Pre Security, sa durée, ses modules et ses laboratoires sont vérifiés par le certificat obtenu le 21 juillet 2026. Les autres valeurs provisoires restent identifiées par un astérisque dans l’interface.
+
+La preuve est publiée dans `assets/certifications/tryhackme-pre-security.pdf`, avec une version WebP optimisée utilisée pour son aperçu sur la page.
 
 Les projets sont définis dans `projects.js`. Un projet encore en préparation est toujours identifié explicitement afin de ne pas le présenter comme déjà réalisé.
 
@@ -30,4 +32,3 @@ Il est ensuite accessible à l'adresse `http://localhost:8000`.
 ## Déploiement
 
 Le site est publié avec GitHub Pages depuis la branche principale du dépôt.
-

@@ -55,14 +55,18 @@ const I18N = {
     cyber_kicker: "Cyber lab",
     cyber_title: "Une pratique régulière sur TryHackMe",
     cyber_intro: "Des laboratoires pour renforcer mes connaissances et manipuler des outils dans un environnement autorisé.",
-    provisional_title: "Aperçu provisoire",
-    provisional_text: "les statistiques, rooms et badges seront remplacés par mes données réelles.",
+    provisional_title: "Données en cours de mise à jour",
+    provisional_text:
+      "le parcours Pre Security est vérifié. Les rooms, badges et autres parcours marqués d’un astérisque restent provisoires.",
     thm_profile_text: "Pratique personnelle d’environ cinq sessions par semaine.",
     thm_profile_link: "Ouvrir le profil public ↗",
     thm_tab_rooms: "Rooms marquantes",
     thm_tab_paths: "Parcours",
     thm_tab_badges: "Badges",
     thm_provisional: "provisoire",
+    thm_certificate_link: "Consulter le certificat (PDF) ↗",
+    thm_certificate_alt: "Aperçu du certificat TryHackMe Pre Security obtenu par SnowPeakPro",
+    thm_certificate_id: "Identifiant",
     watch_kicker: "Veille technologique",
     watch_title: "Suivre, vérifier et comprendre l’actualité cyber",
     watch_intro: "Ma veille s’appuie actuellement sur des organismes institutionnels et des créateurs de contenu spécialisés.",
@@ -82,9 +86,10 @@ const I18N = {
     education_bac_title: "Baccalauréat général",
     education_bac_text: "Mathématiques, NSI et Maths expertes • Mention Bien",
     certs_kicker: "Progression",
-    certs_title: "Certifications",
-    certs_text: "Cette feuille de route distingue les certifications obtenues, en cours et simplement envisagées.",
-    certs_note: "Statuts provisoires à confirmer avant publication définitive.",
+    certs_title: "Certificats et objectifs",
+    certs_text:
+      "Je distingue les certificats de parcours obtenus des certifications professionnelles simplement envisagées.",
+    certs_note: "Le certificat TryHackMe est vérifié ; les autres statuts restent provisoires.",
     contact_kicker: "Contact",
     contact_title: "Échangeons autour d’un projet ou d’une opportunité",
     contact_text: "Je suis disponible pour discuter de réseaux, d’administration système, d’automatisation et de cybersécurité.",
@@ -225,14 +230,18 @@ const I18N = {
     cyber_kicker: "Cyber lab",
     cyber_title: "Regular hands-on practice on TryHackMe",
     cyber_intro: "Labs used to strengthen my knowledge and practice tools in an authorized environment.",
-    provisional_title: "Provisional preview",
-    provisional_text: "statistics, rooms, and badges will be replaced with my actual data.",
+    provisional_title: "Data being updated",
+    provisional_text:
+      "the Pre Security path is verified. Rooms, badges, and other paths marked with an asterisk remain provisional.",
     thm_profile_text: "Personal practice averaging around five sessions per week.",
     thm_profile_link: "Open public profile ↗",
     thm_tab_rooms: "Selected rooms",
     thm_tab_paths: "Learning paths",
     thm_tab_badges: "Badges",
     thm_provisional: "provisional",
+    thm_certificate_link: "View certificate (PDF) ↗",
+    thm_certificate_alt: "Preview of SnowPeakPro's TryHackMe Pre Security certificate",
+    thm_certificate_id: "Certificate ID",
     watch_kicker: "Technology monitoring",
     watch_title: "Following, checking, and understanding cyber news",
     watch_intro: "My current monitoring is based on institutional organizations and specialist content creators.",
@@ -252,9 +261,10 @@ const I18N = {
     education_bac_title: "French general baccalaureate",
     education_bac_text: "Mathematics, Computer Science, and Advanced Mathematics • Honors",
     certs_kicker: "Progress",
-    certs_title: "Certifications",
-    certs_text: "This roadmap distinguishes completed, ongoing, and considered certifications.",
-    certs_note: "Provisional statuses to confirm before final publication.",
+    certs_title: "Certificates and goals",
+    certs_text:
+      "I distinguish completed learning-path certificates from professional certifications that are still being considered.",
+    certs_note: "The TryHackMe certificate is verified; all other statuses remain provisional.",
     contact_kicker: "Contact",
     contact_title: "Let’s discuss a project or opportunity",
     contact_text: "I am available to discuss networks, system administration, automation, and cybersecurity.",
@@ -503,7 +513,7 @@ function renderTryHackMe() {
         <article class="thm-stat">
           <strong>${currentLang === "en" && stat.value_en ? stat.value_en : stat.value}</strong>
           <span>${languageValue(stat, "label")}</span>
-          <small>${I18N[currentLang].thm_provisional}</small>
+          <small class="${stat.verified ? "verified" : ""}">${languageValue(stat, "note") || I18N[currentLang].thm_provisional}</small>
         </article>`
     )
     .join("");
@@ -525,15 +535,41 @@ function renderTryHackMe() {
     .join("")}</div>`;
 
   paths.innerHTML = `<div class="path-grid">${TRYHACKME_DATA.paths
-    .map(
-      (path) => `
-        <article class="path-card">
-          <div class="path-topline"><h3>${path.name}</h3><span class="path-status">${languageValue(path, "status")}</span></div>
-          <p>${languageValue(path, "description")}</p>
-          <div class="progress-track" aria-label="${path.progress}%"><div class="progress-bar" style="width:${path.progress}%"></div></div>
-          <span class="progress-label">${path.progress}% *</span>
-        </article>`
-    )
+    .map((path) => {
+      const facts = path.facts
+        ? `<div class="path-facts">${path.facts
+            .map(
+              (fact) => `
+                <div><strong>${fact.value}</strong><span>${languageValue(fact, "label")}</span></div>`
+            )
+            .join("")}</div>`
+        : "";
+      const certificate = path.certificateUrl
+        ? `
+          <a class="path-certificate-preview" href="${path.certificateUrl}" target="_blank" rel="noopener noreferrer">
+            <img src="${path.certificatePreview}" alt="${I18N[currentLang].thm_certificate_alt}" loading="lazy" width="993" height="703">
+          </a>`
+        : "";
+      const certificateLink = path.certificateUrl
+        ? `
+          <div class="path-certificate-actions">
+            <a class="text-link" href="${path.certificateUrl}" target="_blank" rel="noopener noreferrer">${I18N[currentLang].thm_certificate_link}</a>
+            <span>${I18N[currentLang].thm_certificate_id} : ${path.certificateId}</span>
+          </div>`
+        : "";
+      return `
+        <article class="path-card ${path.verified ? "path-card--verified" : ""}">
+          ${certificate}
+          <div class="path-card-content">
+            <div class="path-topline"><h3>${path.name}</h3><span class="path-status ${path.verified ? "verified" : ""}">${languageValue(path, "status")}</span></div>
+            <p>${languageValue(path, "description")}</p>
+            ${facts}
+            <div class="progress-track" aria-label="${path.name} : ${path.progress}%"><div class="progress-bar" style="width:${path.progress}%"></div></div>
+            <span class="progress-label">${path.progress}%${path.verified ? "" : " *"}</span>
+            ${certificateLink}
+          </div>
+        </article>`;
+    })
     .join("")}</div>`;
 
   badges.innerHTML = `<div class="badge-grid">${TRYHACKME_DATA.badges
@@ -574,8 +610,16 @@ function renderCertifications() {
   if (!container) return;
   container.innerHTML = CERTIFICATION_DATA.map(
     (certification) => `
-      <div class="certification-item">
-        <strong>${certification.name}</strong>
+      <div class="certification-item certification-item--${certification.type}">
+        <div class="certification-copy">
+          <strong>${certification.name}</strong>
+          ${certification.meta_fr ? `<span>${languageValue(certification, "meta")}</span>` : ""}
+          ${
+            certification.url
+              ? `<a href="${certification.url}" target="_blank" rel="noopener noreferrer">${languageValue(certification, "linkLabel")}</a>`
+              : ""
+          }
+        </div>
         <span class="certification-status ${certification.type}">${languageValue(certification, "status")}</span>
       </div>`
   ).join("");
