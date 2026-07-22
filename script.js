@@ -59,6 +59,7 @@ const I18N = {
     thm_snapshot_text: "statistiques, rooms et badges issus du profil public TryHackMe.",
     thm_profile_text: "Pratique personnelle d’environ cinq sessions par semaine.",
     thm_profile_link: "Ouvrir le profil public ↗",
+    thm_level: "Niveau",
     thm_rank: "Rang",
     thm_points: "points",
     thm_updated: "Mis à jour le",
@@ -236,6 +237,7 @@ const I18N = {
     thm_snapshot_text: "statistics, rooms, and badges taken from the public TryHackMe profile.",
     thm_profile_text: "Personal practice averaging around five sessions per week.",
     thm_profile_link: "Open public profile ↗",
+    thm_level: "Level",
     thm_rank: "Rank",
     thm_points: "points",
     thm_updated: "Updated on",
@@ -509,11 +511,13 @@ function renderTryHackMe() {
   const rooms = $("#panel-rooms");
   const paths = $("#panel-paths");
   const badges = $("#panel-badges");
+  const level = $("#thm-level");
   const rank = $("#thm-rank");
   const points = $("#thm-points");
   const updated = $("#thm-updated");
   if (!stats || !rooms || !paths || !badges) return;
 
+  if (level) level.textContent = `${I18N[currentLang].thm_level} ${TRYHACKME_DATA.level}`;
   if (rank) rank.textContent = `${I18N[currentLang].thm_rank} ${TRYHACKME_DATA.rank}`;
   if (points) points.textContent = `${TRYHACKME_DATA.points.toLocaleString(currentLang === "fr" ? "fr-FR" : "en-US")} ${I18N[currentLang].thm_points}`;
   if (updated) {

@@ -13,7 +13,7 @@ Portfolio professionnel statique présentant mon parcours en BUT Réseaux & Tél
 
 ## Données TryHackMe
 
-Les statistiques, la sélection de rooms et les six badges TryHackMe sont regroupés dans `cyber-data.js`. Ils correspondent au profil public `SnowPeakPro` au 21 juillet 2026 : rang `[0x6][VOYAGER]`, 2 982 points, 39 rooms terminées, 6 badges, classement Top 20 % et série active de 13 jours.
+Les statistiques, la sélection de rooms et les six badges TryHackMe sont regroupés dans `cyber-data.js`. Ils correspondent au profil public `SnowPeakPro` au 22 juillet 2026 : niveau 7, rang `[0x7][ADEPT]`, 3 102 points, 40 rooms terminées, 6 badges, classement Top 15 %, série active de 14 jours et meilleure série de 14 jours.
 
 Le parcours Pre Security, sa durée, ses modules et ses laboratoires sont également vérifiés par le certificat obtenu le 21 juillet 2026. Les objectifs de certification qui ne sont pas encore confirmés restent explicitement indiqués comme provisoires.
 

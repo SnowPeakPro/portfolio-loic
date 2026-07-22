@@ -2,21 +2,22 @@
  * DONNÉES TRYHACKME
  * -----------------
  * Les statistiques, rooms et badges ci-dessous ont été vérifiés à partir du
- * profil public SnowPeakPro le 21/07/2026. Les informations du parcours
- * Pre Security sont également confirmées par le certificat obtenu ce jour-là.
+ * profil public SnowPeakPro le 22/07/2026. Les informations du parcours
+ * Pre Security sont également confirmées par le certificat obtenu le 21/07/2026.
  */
 
 const TRYHACKME_DATA = {
   username: "SnowPeakPro",
   profileUrl: "https://tryhackme.com/p/SnowPeakPro",
-  updatedAt: "21/07/2026",
-  updatedAt_en: "21 July 2026",
-  updatedAtISO: "2026-07-21",
-  rank: "[0x6][VOYAGER]",
-  points: 2982,
+  updatedAt: "22/07/2026",
+  updatedAt_en: "22 July 2026",
+  updatedAtISO: "2026-07-22",
+  level: 7,
+  rank: "[0x7][ADEPT]",
+  points: 3102,
   stats: [
     {
-      value: "39",
+      value: "40",
       label_fr: "rooms terminées",
       label_en: "completed rooms",
       note_fr: "profil public",
@@ -32,21 +33,30 @@ const TRYHACKME_DATA = {
       verified: true
     },
     {
-      value: "Top 20 %",
-      value_en: "Top 20%",
+      value: "Top 15 %",
+      value_en: "Top 15%",
       label_fr: "classement global",
       label_en: "global ranking",
-      note_fr: "au 21/07/2026",
-      note_en: "as of 21 July 2026",
+      note_fr: "au 22/07/2026",
+      note_en: "as of 22 July 2026",
       verified: true
     },
     {
-      value: "13 jours",
-      value_en: "13 days",
+      value: "14 jours",
+      value_en: "14 days",
       label_fr: "série actuelle",
       label_en: "current streak",
-      note_fr: "au 21/07/2026",
-      note_en: "as of 21 July 2026",
+      note_fr: "au 22/07/2026",
+      note_en: "as of 22 July 2026",
+      verified: true
+    },
+    {
+      value: "14 jours",
+      value_en: "14 days",
+      label_fr: "meilleure série",
+      label_en: "best streak",
+      note_fr: "record actuel",
+      note_en: "current record",
       verified: true
     }
   ],
