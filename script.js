@@ -63,10 +63,19 @@ const I18N = {
     thm_tab_rooms: "Rooms marquantes",
     thm_tab_paths: "Parcours",
     thm_tab_badges: "Badges",
+    thm_tab_challenges: "Challenges",
     thm_badge_earned: "Obtenu",
     thm_certificate_link: "Consulter le certificat (PDF) ↗",
     thm_certificate_alt: "Aperçu du certificat TryHackMe Pre Security obtenu par SnowPeakPro",
     thm_certificate_id: "Identifiant",
+    thm_challenges_title: "Challenges",
+    thm_challenges_coverage: "équipes représentées",
+    thm_challenges_count_one: "challenge documenté",
+    thm_challenges_count_many: "challenges documentés",
+    thm_challenge_room: "Room sélectionnée",
+    thm_challenge_objective: "Objectif",
+    thm_challenge_vulnerability: "Vulnérabilité exploitée",
+    thm_challenge_action: "Manipulation réalisée",
     watch_kicker: "Veille technologique",
     watch_title: "Suivre, vérifier et comprendre l’actualité cyber",
     watch_intro: "Ma veille s’appuie actuellement sur des organismes institutionnels et des créateurs de contenu spécialisés.",
@@ -237,10 +246,19 @@ const I18N = {
     thm_tab_rooms: "Selected rooms",
     thm_tab_paths: "Learning paths",
     thm_tab_badges: "Badges",
+    thm_tab_challenges: "Challenges",
     thm_badge_earned: "Earned",
     thm_certificate_link: "View certificate (PDF) ↗",
     thm_certificate_alt: "Preview of SnowPeakPro's TryHackMe Pre Security certificate",
     thm_certificate_id: "Certificate ID",
+    thm_challenges_title: "Challenges",
+    thm_challenges_coverage: "represented teams",
+    thm_challenges_count_one: "documented challenge",
+    thm_challenges_count_many: "documented challenges",
+    thm_challenge_room: "Selected room",
+    thm_challenge_objective: "Objective",
+    thm_challenge_vulnerability: "Exploited vulnerability",
+    thm_challenge_action: "Action performed",
     watch_kicker: "Technology monitoring",
     watch_title: "Following, checking, and understanding cyber news",
     watch_intro: "My current monitoring is based on institutional organizations and specialist content creators.",
@@ -503,10 +521,11 @@ function renderTryHackMe() {
   const rooms = $("#panel-rooms");
   const paths = $("#panel-paths");
   const badges = $("#panel-badges");
+  const challenges = $("#panel-challenges");
   const rank = $("#thm-rank");
   const points = $("#thm-points");
   const updated = $("#thm-updated");
-  if (!stats || !rooms || !paths || !badges) return;
+  if (!stats || !rooms || !paths || !badges || !challenges) return;
 
   if (rank) rank.textContent = `${I18N[currentLang].thm_rank} ${TRYHACKME_DATA.rank}`;
   if (points) points.textContent = `${TRYHACKME_DATA.points.toLocaleString(currentLang === "fr" ? "fr-FR" : "en-US")} ${I18N[currentLang].thm_points}`;
@@ -597,6 +616,100 @@ function renderTryHackMe() {
         </article>`
     )
     .join("")}</div>`;
+
+  const challengeData = TRYHACKME_DATA.challenges;
+  const challengeCount = challengeData.teams.reduce((total, team) => total + team.rooms.length, 0);
+  const representedTeams = challengeData.teams.filter((team) => team.rooms.length > 0).length;
+  const coverage = Math.round((representedTeams / challengeData.teams.length) * 100);
+  const challengeCountLabel =
+    challengeCount === 1 ? I18N[currentLang].thm_challenges_count_one : I18N[currentLang].thm_challenges_count_many;
+
+  const teamCards = challengeData.teams
+    .map((team) => {
+      const roomsMarkup = team.rooms.length
+        ? team.rooms
+            .map(
+              (room) => `
+                <article class="challenge-room">
+                  <div class="challenge-room-topline">
+                    <span class="challenge-room-label">${I18N[currentLang].thm_challenge_room}</span>
+                    <span class="challenge-room-status">${languageValue(room, "status")}</span>
+                  </div>
+                  <h4>${room.name}</h4>
+                  <p class="challenge-room-quote" lang="en">“${room.description}”</p>
+                  <dl class="challenge-details">
+                    <div>
+                      <dt>${I18N[currentLang].thm_challenge_objective}</dt>
+                      <dd>${languageValue(room, "objective")}</dd>
+                    </div>
+                    <div>
+                      <dt>${I18N[currentLang].thm_challenge_vulnerability}</dt>
+                      <dd>${languageValue(room, "vulnerability")}</dd>
+                    </div>
+                    <div>
+                      <dt>${I18N[currentLang].thm_challenge_action}</dt>
+                      <dd>${languageValue(room, "action")}</dd>
+                    </div>
+                  </dl>
+                  ${createTags(room.tags)}
+                </article>`
+            )
+            .join("")
+        : `<p class="challenge-team-empty">${languageValue(team, "empty")}</p>`;
+
+      return `
+        <article class="challenge-team-card challenge-team-card--${team.id}">
+          <header class="challenge-team-head">
+            <span class="challenge-team-marker" aria-hidden="true">${team.name.slice(0, 1)}</span>
+            <div>
+              <p>${languageValue(team, "role")}</p>
+              <h3>${team.name}</h3>
+            </div>
+            <span class="challenge-team-count">${team.rooms.length}</span>
+          </header>
+          ${roomsMarkup}
+        </article>`;
+    })
+    .join("");
+
+  challenges.innerHTML = `
+    <section class="challenge-dashboard" aria-labelledby="challenge-dashboard-title">
+      <div class="challenge-dashboard-copy">
+        <p class="card-label">TryHackMe</p>
+        <h3 id="challenge-dashboard-title">${I18N[currentLang].thm_challenges_title}</h3>
+        <p>${languageValue(challengeData, "introduction")}</p>
+        <div class="challenge-progress-row">
+          <div
+            class="challenge-progress-track"
+            role="progressbar"
+            aria-label="${representedTeams} / ${challengeData.teams.length} ${I18N[currentLang].thm_challenges_coverage}"
+            aria-valuemin="0"
+            aria-valuemax="${challengeData.teams.length}"
+            aria-valuenow="${representedTeams}"
+          >
+            <span style="width: ${coverage}%"></span>
+          </div>
+          <strong>${representedTeams}</strong>
+          <span>/ ${challengeData.teams.length} ${I18N[currentLang].thm_challenges_coverage}</span>
+        </div>
+      </div>
+      <div class="challenge-dashboard-count">
+        <strong>${challengeCount}</strong>
+        <span>${challengeCountLabel}</span>
+      </div>
+      <div class="challenge-team-summary" aria-label="${I18N[currentLang].thm_challenges_coverage}">
+        ${challengeData.teams
+          .map(
+            (team) => `
+              <div class="challenge-team-summary-item challenge-team-summary-item--${team.id}">
+                <strong>${team.rooms.length}</strong>
+                <span>${team.name}</span>
+              </div>`
+          )
+          .join("")}
+      </div>
+    </section>
+    <div class="challenge-team-grid">${teamCards}</div>`;
 }
 
 function renderSources() {

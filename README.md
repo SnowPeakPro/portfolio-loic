@@ -6,8 +6,7 @@ Portfolio professionnel présentant mon parcours en BUT Réseaux & Télécommuni
 
 - études de cas professionnelles, académiques et personnelles ;
 - compétences reliées à des contextes de mise en pratique ;
-- progression TryHackMe ;
+- progression TryHackMe, badges et challenges documentés ;
 - sources de veille institutionnelles et chaînes spécialisées ;
 - version française et anglaise ;
 - mise en page responsive et accessible au clavier.
-
