@@ -967,16 +967,24 @@ a {
   padding: 1.5rem;
 }
 
-.thm-avatar {
+.thm-avatar-frame {
   display: block;
   width: 84px;
   height: 84px;
   flex-shrink: 0;
+  overflow: hidden;
   border: 1px solid var(--line-strong);
   border-radius: 22px;
   background: linear-gradient(145deg, rgba(89, 225, 193, 0.2), rgba(101, 184, 255, 0.13));
-  object-fit: cover;
   box-shadow: 0 12px 30px rgba(2, 8, 15, 0.32);
+}
+
+.thm-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(-2px) scale(1.04);
 }
 
 .thm-profile-card .card-label {
@@ -1126,6 +1134,7 @@ a {
   height: 100%;
   padding: 0.3rem;
   object-fit: contain;
+  transform: translateY(-2px);
 }
 
 .badge-card .badge-head {
