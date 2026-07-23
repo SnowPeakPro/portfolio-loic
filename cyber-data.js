@@ -2,26 +2,26 @@
  * DONNÉES TRYHACKME
  * -----------------
  * Les statistiques, rooms et badges ci-dessous ont été vérifiés à partir du
- * profil public SnowPeakPro le 22/07/2026. Les informations du parcours
+ * profil public SnowPeakPro le 23/07/2026. Les informations du parcours
  * Pre Security sont également confirmées par le certificat obtenu le 21/07/2026.
  */
 
 const TRYHACKME_DATA = {
   username: "SnowPeakPro",
   profileUrl: "https://tryhackme.com/p/SnowPeakPro",
-  updatedAt: "22/07/2026",
-  updatedAt_en: "22 July 2026",
-  updatedAtISO: "2026-07-22",
+  updatedAt: "23/07/2026",
+  updatedAt_en: "23 July 2026",
+  updatedAtISO: "2026-07-23",
   rank: "[0x7][ADEPT]",
   points: 3102,
   stats: [
     {
-      value: "40",
+      value: "42",
       label_fr: "rooms terminées",
       label_en: "completed rooms"
     },
     {
-      value: "6",
+      value: "7",
       label_fr: "badges obtenus",
       label_en: "earned badges"
     },
@@ -165,14 +165,16 @@ const TRYHACKME_DATA = {
   ],
   badges: [
     {
-      code: "04",
-      name_fr: "First Four",
-      name_en: "First Four",
-      description_fr: "Quatre rooms terminées pendant ma première semaine sur la plateforme.",
-      description_en: "Four rooms completed during my first week on the platform."
+      code: "READY",
+      image: "assets/tryhackme/cyber-ready.webp",
+      name_fr: "Cyber Ready",
+      name_en: "Cyber Ready",
+      description_fr: "Compréhension de l’impact de la formation en cybersécurité au sein d’une équipe.",
+      description_en: "Understanding the impact of cybersecurity training on teams."
     },
     {
       code: ">_",
+      image: "assets/tryhackme/cat-linux.webp",
       name_fr: "cat linux.txt",
       name_en: "cat linux.txt",
       description_fr: "Compétences fondamentales validées dans l’utilisation de Linux.",
@@ -180,6 +182,7 @@ const TRYHACKME_DATA = {
     },
     {
       code: "NET",
+      image: "assets/tryhackme/networking-nerd.webp",
       name_fr: "Networking Nerd",
       name_en: "Networking Nerd",
       description_fr: "Badge obtenu après avoir terminé le module Network Fundamentals.",
@@ -187,6 +190,7 @@ const TRYHACKME_DATA = {
     },
     {
       code: "WEB",
+      image: "assets/tryhackme/webbed.webp",
       name_fr: "Webbed",
       name_en: "Webbed",
       description_fr: "Compréhension du fonctionnement général du Web.",
@@ -194,6 +198,7 @@ const TRYHACKME_DATA = {
     },
     {
       code: "WWW",
+      image: "assets/tryhackme/world-wide-web.webp",
       name_fr: "World Wide Web",
       name_en: "World Wide Web",
       description_fr: "Badge obtenu après avoir terminé le module How the Web Works.",
@@ -201,6 +206,7 @@ const TRYHACKME_DATA = {
     },
     {
       code: "7D",
+      image: "assets/tryhackme/seven-day-streak.webp",
       name_fr: "7 Day Streak",
       name_en: "7 Day Streak",
       description_fr: "Série d’apprentissage de sept jours consécutifs atteinte.",
