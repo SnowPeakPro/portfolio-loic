@@ -13,10 +13,10 @@ const TRYHACKME_DATA = {
   updatedAt_en: "23 July 2026",
   updatedAtISO: "2026-07-23",
   rank: "[0x7][ADEPT]",
-  points: 3102,
+  points: 3644,
   stats: [
     {
-      value: "42",
+      value: "47",
       label_fr: "rooms terminées",
       label_en: "completed rooms"
     },
@@ -32,14 +32,14 @@ const TRYHACKME_DATA = {
       label_en: "global ranking"
     },
     {
-      value: "14 jours",
-      value_en: "14 days",
+      value: "15 jours",
+      value_en: "15 days",
       label_fr: "série actuelle",
       label_en: "current streak"
     },
     {
-      value: "14 jours",
-      value_en: "14 days",
+      value: "15 jours",
+      value_en: "15 days",
       label_fr: "meilleure série",
       label_en: "best streak"
     }
@@ -104,6 +104,18 @@ const TRYHACKME_DATA = {
       learning_en: "User management, operating-system security, and SSH authentication on Linux.",
       tools: ["Linux", "SSH", "Comptes"],
       tools_en: ["Linux", "SSH", "Accounts"]
+    },
+    {
+      name: "John the Ripper: The Basics",
+      code: "JTR",
+      status_fr: "Terminée",
+      status_en: "Completed",
+      category_fr: "Audit de mots de passe",
+      category_en: "Password auditing",
+      learning_fr: "Prise en main de John the Ripper pour tester la robustesse de mots de passe et de passphrases avec une wordlist, notamment après conversion d’une clé privée SSH avec ssh2john.",
+      learning_en: "Using John the Ripper to test password and passphrase strength with a wordlist, including after converting an SSH private key with ssh2john.",
+      tools: ["John the Ripper", "rockyou.txt", "ssh2john"],
+      tools_en: ["John the Ripper", "rockyou.txt", "ssh2john"]
     },
     {
       name: "Web Application Security",
