@@ -212,7 +212,63 @@ const TRYHACKME_DATA = {
       description_fr: "Série d’apprentissage de sept jours consécutifs atteinte.",
       description_en: "Seven-day consecutive learning streak achieved."
     }
-  ]
+  ],
+  challenges: {
+    introduction_fr:
+      "Une sélection de rooms courtes qui m’ont permis d’identifier puis d’exploiter une vulnérabilité dans un environnement légal et isolé.",
+    introduction_en:
+      "A selection of short rooms where I identified and exploited a vulnerability in a legal, isolated environment.",
+    teams: [
+      {
+        id: "purple",
+        name: "Purple Team",
+        role_fr: "Coordination offensive et défensive",
+        role_en: "Offensive and defensive coordination",
+        empty_fr: "Aucune room sélectionnée pour le moment.",
+        empty_en: "No room selected yet.",
+        rooms: []
+      },
+      {
+        id: "red",
+        name: "Red Team",
+        role_fr: "Sécurité offensive",
+        role_en: "Offensive security",
+        empty_fr: "Aucune room sélectionnée pour le moment.",
+        empty_en: "No room selected yet.",
+        rooms: [
+          {
+            name: "Neighbour",
+            status_fr: "Terminée",
+            status_en: "Completed",
+            description:
+              "Check out our new cloud service, Authentication Anywhere. Can you find other user's secrets?",
+            objective_fr:
+              "Accéder aux informations d’un autre utilisateur sur le service fictif Authentication Anywhere.",
+            objective_en:
+              "Access another user's information on the fictional Authentication Anywhere service.",
+            vulnerability_fr:
+              "Une IDOR (Insecure Direct Object Reference), liée à un contrôle d’accès insuffisant : le serveur se fiait à l’identifiant transmis dans l’URL sans vérifier que la ressource appartenait à l’utilisateur connecté.",
+            vulnerability_en:
+              "An IDOR (Insecure Direct Object Reference) caused by insufficient access control: the server trusted the identifier supplied in the URL without checking whether the signed-in user was authorized to access the resource.",
+            action_fr:
+              "J’ai modifié directement dans l’URL du navigateur la valeur du paramètre envoyé à la page PHP afin de cibler un autre utilisateur. Le serveur a alors renvoyé ses informations sans effectuer le contrôle d’autorisation attendu.",
+            action_en:
+              "I changed the parameter value sent to the PHP page directly in the browser URL to target another user. The server then returned that user's information without performing the expected authorization check.",
+            tags: ["IDOR", "Broken Access Control", "PHP", "URL"]
+          }
+        ]
+      },
+      {
+        id: "blue",
+        name: "Blue Team",
+        role_fr: "Détection et défense",
+        role_en: "Detection and defence",
+        empty_fr: "Aucune room sélectionnée pour le moment.",
+        empty_en: "No room selected yet.",
+        rooms: []
+      }
+    ]
+  }
 };
 
 const WATCH_DATA = {
