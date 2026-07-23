@@ -55,11 +55,8 @@ const I18N = {
     cyber_kicker: "Cyber lab",
     cyber_title: "Une pratique régulière sur TryHackMe",
     cyber_intro: "Des laboratoires pour renforcer mes connaissances et manipuler des outils dans un environnement autorisé.",
-    thm_snapshot_title: "Données vérifiées",
-    thm_snapshot_text: "statistiques, rooms et badges issus du profil public TryHackMe.",
     thm_profile_text: "Pratique personnelle d’environ cinq sessions par semaine.",
     thm_profile_link: "Ouvrir le profil public ↗",
-    thm_level: "Niveau",
     thm_rank: "Rang",
     thm_points: "points",
     thm_updated: "Mis à jour le",
@@ -90,9 +87,8 @@ const I18N = {
     education_bac_text: "Mathématiques, NSI et Maths expertes • Mention Bien",
     certs_kicker: "Progression",
     certs_title: "Certificats et objectifs",
-    certs_text:
-      "Je distingue les certificats de parcours obtenus des certifications professionnelles simplement envisagées.",
-    certs_note: "Le certificat TryHackMe est vérifié ; les autres statuts restent provisoires.",
+    certs_earned_group: "Certificats obtenus",
+    certs_planned_group: "En cours ou envisagés",
     contact_kicker: "Contact",
     contact_title: "Échangeons autour d’un projet ou d’une opportunité",
     contact_text: "Je suis disponible pour discuter de réseaux, d’administration système, d’automatisation et de cybersécurité.",
@@ -233,11 +229,8 @@ const I18N = {
     cyber_kicker: "Cyber lab",
     cyber_title: "Regular hands-on practice on TryHackMe",
     cyber_intro: "Labs used to strengthen my knowledge and practice tools in an authorized environment.",
-    thm_snapshot_title: "Verified data",
-    thm_snapshot_text: "statistics, rooms, and badges taken from the public TryHackMe profile.",
     thm_profile_text: "Personal practice averaging around five sessions per week.",
     thm_profile_link: "Open public profile ↗",
-    thm_level: "Level",
     thm_rank: "Rank",
     thm_points: "points",
     thm_updated: "Updated on",
@@ -268,9 +261,8 @@ const I18N = {
     education_bac_text: "Mathematics, Computer Science, and Advanced Mathematics • Honors",
     certs_kicker: "Progress",
     certs_title: "Certificates and goals",
-    certs_text:
-      "I distinguish completed learning-path certificates from professional certifications that are still being considered.",
-    certs_note: "The TryHackMe certificate is verified; all other statuses remain provisional.",
+    certs_earned_group: "Earned certificates",
+    certs_planned_group: "In progress or planned",
     contact_kicker: "Contact",
     contact_title: "Let’s discuss a project or opportunity",
     contact_text: "I am available to discuss networks, system administration, automation, and cybersecurity.",
@@ -511,13 +503,11 @@ function renderTryHackMe() {
   const rooms = $("#panel-rooms");
   const paths = $("#panel-paths");
   const badges = $("#panel-badges");
-  const level = $("#thm-level");
   const rank = $("#thm-rank");
   const points = $("#thm-points");
   const updated = $("#thm-updated");
   if (!stats || !rooms || !paths || !badges) return;
 
-  if (level) level.textContent = `${I18N[currentLang].thm_level} ${TRYHACKME_DATA.level}`;
   if (rank) rank.textContent = `${I18N[currentLang].thm_rank} ${TRYHACKME_DATA.rank}`;
   if (points) points.textContent = `${TRYHACKME_DATA.points.toLocaleString(currentLang === "fr" ? "fr-FR" : "en-US")} ${I18N[currentLang].thm_points}`;
   if (updated) {
@@ -532,7 +522,6 @@ function renderTryHackMe() {
         <article class="thm-stat">
           <strong>${currentLang === "en" && stat.value_en ? stat.value_en : stat.value}</strong>
           <span>${languageValue(stat, "label")}</span>
-          <small class="${stat.verified ? "verified" : ""}">${languageValue(stat, "note") || ""}</small>
         </article>`
     )
     .join("");
@@ -627,8 +616,10 @@ function renderSources() {
 function renderCertifications() {
   const container = $("#certifications-list");
   if (!container) return;
-  container.innerHTML = CERTIFICATION_DATA.map(
-    (certification) => `
+
+  const renderItems = (certifications) =>
+    certifications.map(
+      (certification) => `
       <div class="certification-item certification-item--${certification.type}">
         <div class="certification-copy">
           <strong>${certification.name}</strong>
@@ -641,7 +632,31 @@ function renderCertifications() {
         </div>
         <span class="certification-status ${certification.type}">${languageValue(certification, "status")}</span>
       </div>`
-  ).join("");
+    ).join("");
+
+  const groups = [
+    {
+      key: "earned",
+      title: I18N[currentLang].certs_earned_group,
+      items: CERTIFICATION_DATA.filter((certification) => certification.type === "earned")
+    },
+    {
+      key: "planned",
+      title: I18N[currentLang].certs_planned_group,
+      items: CERTIFICATION_DATA.filter((certification) => certification.type !== "earned")
+    }
+  ];
+
+  container.innerHTML = groups
+    .filter((group) => group.items.length)
+    .map(
+      (group) => `
+        <section class="certification-group certification-group--${group.key}">
+          <h3>${group.title}</h3>
+          <div class="certification-group-list">${renderItems(group.items)}</div>
+        </section>`
+    )
+    .join("");
 }
 
 function listMarkup(items) {

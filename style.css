@@ -944,33 +944,6 @@ a {
     #050d17;
 }
 
-.profile-status-banner {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid rgba(89, 225, 193, 0.28);
-  border-radius: 12px;
-  background: rgba(89, 225, 193, 0.07);
-  padding: 0.85rem 1rem;
-}
-
-.profile-status-banner p {
-  margin: 0;
-  color: #c7eee4;
-  font-size: 0.8rem;
-}
-
-.profile-status-dot {
-  width: 8px;
-  height: 8px;
-  margin-top: 0.55rem;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 5px rgba(89, 225, 193, 0.09);
-}
-
 .thm-overview {
   display: grid;
   grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
@@ -1071,23 +1044,13 @@ a {
   color: var(--text);
   font-size: clamp(1.2rem, 2vw, 1.65rem);
   letter-spacing: -0.04em;
+  white-space: nowrap;
 }
 
 .thm-stat span {
   margin-top: 0.35rem;
   color: var(--text-faint);
   font-size: 0.69rem;
-}
-
-.thm-stat small {
-  margin-top: 0.55rem;
-  color: var(--warning);
-  font-size: 0.58rem;
-  text-transform: uppercase;
-}
-
-.thm-stat small.verified {
-  color: var(--accent);
 }
 
 .cyber-tabs {
@@ -1494,14 +1457,40 @@ a {
   padding: 1.3rem;
 }
 
-.certification-card > p {
-  font-size: 0.82rem;
-}
-
 .certification-list {
   display: grid;
-  gap: 0.55rem;
-  margin-top: 1.2rem;
+  gap: 1rem;
+}
+
+.certification-group {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(5, 13, 23, 0.26);
+}
+
+.certification-group--earned {
+  border-color: rgba(89, 225, 193, 0.3);
+  background: rgba(89, 225, 193, 0.04);
+}
+
+.certification-group h3 {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 0.8rem 0.9rem;
+  color: var(--text-soft);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certification-group--earned h3 {
+  border-bottom-color: rgba(89, 225, 193, 0.2);
+  color: var(--accent);
+}
+
+.certification-group-list {
+  display: grid;
 }
 
 .certification-item {
@@ -1509,8 +1498,11 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  padding: 0.8rem 0.9rem;
+}
+
+.certification-item + .certification-item {
   border-top: 1px solid var(--line);
-  padding-top: 0.65rem;
 }
 
 .certification-item strong {
@@ -1518,10 +1510,7 @@ a {
 }
 
 .certification-item--earned {
-  border: 1px solid rgba(89, 225, 193, 0.3);
-  border-radius: 12px;
-  background: rgba(89, 225, 193, 0.06);
-  padding: 0.8rem;
+  background: rgba(89, 225, 193, 0.025);
 }
 
 .certification-copy {
@@ -1568,12 +1557,6 @@ a {
 .certification-status.considered {
   background: rgba(101, 184, 255, 0.1);
   color: #a9d5ff;
-}
-
-.data-note {
-  margin: 1.2rem 0 0;
-  color: var(--warning);
-  font-size: 0.68rem !important;
 }
 
 .contact-section {

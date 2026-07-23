@@ -12,52 +12,36 @@ const TRYHACKME_DATA = {
   updatedAt: "22/07/2026",
   updatedAt_en: "22 July 2026",
   updatedAtISO: "2026-07-22",
-  level: 7,
   rank: "[0x7][ADEPT]",
   points: 3102,
   stats: [
     {
       value: "40",
       label_fr: "rooms terminées",
-      label_en: "completed rooms",
-      note_fr: "profil public",
-      note_en: "public profile",
-      verified: true
+      label_en: "completed rooms"
     },
     {
       value: "6",
       label_fr: "badges obtenus",
-      label_en: "earned badges",
-      note_fr: "profil public",
-      note_en: "public profile",
-      verified: true
+      label_en: "earned badges"
     },
     {
-      value: "Top 15 %",
+      value: "Top 15\u00a0%",
       value_en: "Top 15%",
       label_fr: "classement global",
-      label_en: "global ranking",
-      note_fr: "au 22/07/2026",
-      note_en: "as of 22 July 2026",
-      verified: true
+      label_en: "global ranking"
     },
     {
       value: "14 jours",
       value_en: "14 days",
       label_fr: "série actuelle",
-      label_en: "current streak",
-      note_fr: "au 22/07/2026",
-      note_en: "as of 22 July 2026",
-      verified: true
+      label_en: "current streak"
     },
     {
       value: "14 jours",
       value_en: "14 days",
       label_fr: "meilleure série",
-      label_en: "best streak",
-      note_fr: "record actuel",
-      note_en: "current record",
-      verified: true
+      label_en: "best streak"
     }
   ],
   rooms: [
