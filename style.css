@@ -968,18 +968,15 @@ a {
 }
 
 .thm-avatar {
-  display: grid;
+  display: block;
   width: 84px;
   height: 84px;
   flex-shrink: 0;
-  place-items: center;
   border: 1px solid var(--line-strong);
   border-radius: 22px;
   background: linear-gradient(145deg, rgba(89, 225, 193, 0.2), rgba(101, 184, 255, 0.13));
-  color: var(--accent);
-  font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 1.25rem;
-  font-weight: 850;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(2, 8, 15, 0.32);
 }
 
 .thm-profile-card .card-label {
@@ -1110,6 +1107,29 @@ a {
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 0.65rem;
   font-weight: 800;
+}
+
+.badge-visual {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(89, 225, 193, 0.12), rgba(101, 184, 255, 0.08));
+}
+
+.badge-visual img {
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem;
+  object-fit: contain;
+}
+
+.badge-card .badge-head {
+  align-items: center;
 }
 
 .room-status,

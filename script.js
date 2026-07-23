@@ -584,7 +584,14 @@ function renderTryHackMe() {
     .map(
       (badge) => `
         <article class="badge-card">
-          <div class="badge-head"><span class="badge-code" aria-hidden="true">${badge.code}</span><span class="badge-status">${I18N[currentLang].thm_badge_earned}</span></div>
+          <div class="badge-head">
+            ${
+              badge.image
+                ? `<span class="badge-visual" aria-hidden="true"><img src="${badge.image}" alt="" width="170" height="200" loading="lazy" decoding="async"></span>`
+                : `<span class="badge-code" aria-hidden="true">${badge.code}</span>`
+            }
+            <span class="badge-status">${I18N[currentLang].thm_badge_earned}</span>
+          </div>
           <h3>${languageValue(badge, "name")}</h3>
           <p>${languageValue(badge, "description")}</p>
         </article>`
