@@ -215,9 +215,9 @@ const TRYHACKME_DATA = {
   ],
   challenges: {
     introduction_fr:
-      "Une sélection de rooms courtes qui m’ont permis d’identifier puis d’exploiter une vulnérabilité dans un environnement légal et isolé.",
+      "Une sélection de rooms TryHackMe qui me permet d’explorer trois approches complémentaires : exploiter des vulnérabilités en Red Team, détecter et contrer les menaces en Blue Team, puis améliorer les défenses par la collaboration entre ces deux équipes en Purple Team, le tout dans des environnements légaux et isolés.",
     introduction_en:
-      "A selection of short rooms where I identified and exploited a vulnerability in a legal, isolated environment.",
+      "A selection of TryHackMe rooms through which I explore three complementary approaches: exploiting vulnerabilities from a Red Team perspective, detecting and countering threats from a Blue Team perspective, and improving defenses through Purple Team collaboration between the two, all within legal, isolated environments.",
     teams: [
       {
         id: "purple",
