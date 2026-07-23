@@ -1349,10 +1349,15 @@ a {
 }
 
 .source-icon,
-.source-code {
+.source-code,
+.source-logo {
   display: grid;
   place-items: center;
   border: 1px solid var(--line-strong);
+}
+
+.source-icon,
+.source-code {
   background: rgba(89, 225, 193, 0.08);
   color: var(--accent);
   font-family: "SFMono-Regular", Consolas, monospace;
@@ -1365,6 +1370,18 @@ a {
   flex-shrink: 0;
   border-radius: 15px;
   font-size: 0.68rem;
+}
+
+.source-icon--image,
+.source-logo {
+  overflow: hidden;
+  background: rgba(246, 250, 255, 0.96);
+}
+
+.source-icon--image img {
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
 }
 
 .source-group-head .card-label {
@@ -1383,7 +1400,7 @@ a {
 
 .source-item {
   display: grid;
-  grid-template-columns: 38px minmax(0, 1fr) auto;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
   align-items: center;
   gap: 0.8rem;
   border: 1px solid rgba(155, 199, 231, 0.1);
@@ -1399,11 +1416,21 @@ a {
   transform: translateX(3px);
 }
 
-.source-code {
-  width: 38px;
-  height: 38px;
+.source-code,
+.source-logo {
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
+}
+
+.source-code {
   font-size: 0.6rem;
+}
+
+.source-logo img {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  object-fit: contain;
 }
 
 .source-item strong {
@@ -2037,7 +2064,7 @@ a {
   }
 
   .source-item {
-    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-columns: 42px minmax(0, 1fr);
   }
 
   .source-arrow {

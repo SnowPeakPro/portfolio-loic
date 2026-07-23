@@ -220,6 +220,7 @@ const WATCH_DATA = {
     {
       name: "ANSSI",
       code: "AN",
+      image: "assets/watch/anssi.svg",
       url: "https://cyber.gouv.fr/",
       description_fr: "Recommandations, guides et publications de référence en cybersécurité.",
       description_en: "Reference cybersecurity recommendations, guides, and publications."
@@ -227,6 +228,7 @@ const WATCH_DATA = {
     {
       name: "CERT-FR",
       code: "CF",
+      image: "assets/watch/cert-fr.svg",
       url: "https://www.cert.ssi.gouv.fr/",
       description_fr: "Alertes, avis de sécurité et bulletins sur les vulnérabilités actives.",
       description_en: "Alerts, security advisories, and active-vulnerability bulletins."
@@ -234,6 +236,7 @@ const WATCH_DATA = {
     {
       name: "CISA",
       code: "CI",
+      image: "assets/watch/cisa.webp",
       url: "https://www.cisa.gov/",
       description_fr: "Alertes internationales et catalogue des vulnérabilités exploitées.",
       description_en: "International alerts and known-exploited-vulnerability catalog."
@@ -241,6 +244,7 @@ const WATCH_DATA = {
     {
       name: "CNIL",
       code: "CN",
+      image: "assets/watch/cnil.webp",
       url: "https://www.cnil.fr/",
       description_fr: "Protection des données, cadre réglementaire et bonnes pratiques RGPD.",
       description_en: "Data protection, regulatory guidance, and GDPR best practices."
@@ -248,6 +252,7 @@ const WATCH_DATA = {
     {
       name: "ENISA",
       code: "EU",
+      image: "assets/watch/enisa.webp",
       url: "https://www.enisa.europa.eu/",
       description_fr: "Rapports européens sur les menaces, les risques et la résilience numérique.",
       description_en: "European reports on threats, risks, and digital resilience."

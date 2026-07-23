@@ -609,7 +609,11 @@ function renderSources() {
       .map(
         (item) => `
           <a class="source-item" href="${item.url}" target="_blank" rel="noopener noreferrer">
-            <span class="source-code" aria-hidden="true">${item.code}</span>
+            ${
+              item.image
+                ? `<span class="source-logo" aria-hidden="true"><img src="${item.image}" alt="" width="42" height="42" loading="lazy" decoding="async"></span>`
+                : `<span class="source-code" aria-hidden="true">${item.code}</span>`
+            }
             <div><strong>${item.name}</strong><p>${languageValue(item, "description")}</p></div>
             <span class="source-arrow" aria-hidden="true">↗</span>
           </a>`
