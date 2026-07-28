@@ -13,12 +13,12 @@ const TRYHACKME_DATA = {
   updatedAt_en: "28 July 2026",
   updatedAtISO: "2026-07-28",
   rank: "[0x8][HACKER]",
-  globalRank: 247857,
-  topPercent: 10,
-  points: 4339,
+  globalRank: 209289,
+  topPercent: 9,
+  points: 5544,
   stats: [
     {
-      value: "54",
+      value: "61",
       label_fr: "rooms terminées",
       label_en: "completed rooms"
     },
@@ -28,14 +28,14 @@ const TRYHACKME_DATA = {
       label_en: "earned badges"
     },
     {
-      value: "19 jours",
-      value_en: "19 days",
+      value: "20 jours",
+      value_en: "20 days",
       label_fr: "série actuelle",
       label_en: "current streak"
     },
     {
-      value: "19 jours",
-      value_en: "19 days",
+      value: "20 jours",
+      value_en: "20 days",
       label_fr: "meilleure série",
       label_en: "best streak"
     }
