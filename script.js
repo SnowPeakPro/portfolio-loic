@@ -535,15 +535,36 @@ function renderTryHackMe() {
     updated.dateTime = TRYHACKME_DATA.updatedAtISO;
   }
 
-  stats.innerHTML = TRYHACKME_DATA.stats
-    .map(
-      (stat) => `
-        <article class="thm-stat">
-          <strong>${currentLang === "en" && stat.value_en ? stat.value_en : stat.value}</strong>
-          <span>${languageValue(stat, "label")}</span>
-        </article>`
-    )
-    .join("");
+  const rankLocale = currentLang === "fr" ? "fr-FR" : "en-US";
+  const globalRank = TRYHACKME_DATA.globalRank.toLocaleString(rankLocale);
+  const topPercent = currentLang === "fr"
+    ? `Top ${TRYHACKME_DATA.topPercent}\u00a0%`
+    : `Top ${TRYHACKME_DATA.topPercent}%`;
+  const rankAriaLabel = currentLang === "fr"
+    ? `Rang mondial ${globalRank}, ${topPercent}`
+    : `Global rank ${globalRank}, ${topPercent}`;
+
+  stats.innerHTML = `
+    <article class="thm-stat thm-stat--rank" aria-label="${rankAriaLabel}">
+      <span class="thm-rank-label">${I18N[currentLang].thm_rank}</span>
+      <strong class="thm-rank-percent">${topPercent}</strong>
+      <div class="thm-rank-value">
+        <svg class="thm-rank-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 3h12v4a6 6 0 0 1-12 0V3Z"></path>
+          <path d="M6 5H3v2a4 4 0 0 0 4 4M18 5h3v2a4 4 0 0 1-4 4M12 13v5M8 21h8"></path>
+        </svg>
+        <strong>${globalRank}</strong>
+      </div>
+    </article>
+    ${TRYHACKME_DATA.stats
+      .map(
+        (stat) => `
+          <article class="thm-stat">
+            <strong>${currentLang === "en" && stat.value_en ? stat.value_en : stat.value}</strong>
+            <span>${languageValue(stat, "label")}</span>
+          </article>`
+      )
+      .join("")}`;
 
   rooms.innerHTML = `<div class="room-grid">${TRYHACKME_DATA.rooms
     .map(
