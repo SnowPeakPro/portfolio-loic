@@ -2,17 +2,19 @@
  * DONNÉES TRYHACKME
  * -----------------
  * Les statistiques, rooms et badges ci-dessous ont été vérifiés à partir du
- * profil public SnowPeakPro le 27/07/2026. Les informations du parcours
+ * profil public SnowPeakPro le 28/07/2026. Les informations du parcours
  * Pre Security sont également confirmées par le certificat obtenu le 21/07/2026.
  */
 
 const TRYHACKME_DATA = {
   username: "SnowPeakPro",
   profileUrl: "https://tryhackme.com/p/SnowPeakPro",
-  updatedAt: "27/07/2026",
-  updatedAt_en: "27 July 2026",
-  updatedAtISO: "2026-07-27",
+  updatedAt: "28/07/2026",
+  updatedAt_en: "28 July 2026",
+  updatedAtISO: "2026-07-28",
   rank: "[0x8][HACKER]",
+  globalRank: 247857,
+  topPercent: 10,
   points: 4339,
   stats: [
     {
@@ -24,12 +26,6 @@ const TRYHACKME_DATA = {
       value: "7",
       label_fr: "badges obtenus",
       label_en: "earned badges"
-    },
-    {
-      value: "Top 15\u00a0%",
-      value_en: "Top 15%",
-      label_fr: "classement global",
-      label_en: "global ranking"
     },
     {
       value: "19 jours",
