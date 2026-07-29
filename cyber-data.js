@@ -2,23 +2,23 @@
  * DONNÉES TRYHACKME
  * -----------------
  * Les statistiques, rooms et badges ci-dessous ont été vérifiés à partir du
- * profil public SnowPeakPro le 28/07/2026. Les informations du parcours
+ * profil public SnowPeakPro le 29/07/2026. Les informations du parcours
  * Pre Security sont également confirmées par le certificat obtenu le 21/07/2026.
  */
 
 const TRYHACKME_DATA = {
   username: "SnowPeakPro",
   profileUrl: "https://tryhackme.com/p/SnowPeakPro",
-  updatedAt: "28/07/2026",
-  updatedAt_en: "28 July 2026",
-  updatedAtISO: "2026-07-28",
+  updatedAt: "29/07/2026",
+  updatedAt_en: "29 July 2026",
+  updatedAtISO: "2026-07-29",
   rank: "[0x8][HACKER]",
-  globalRank: 209289,
-  topPercent: 9,
-  points: 5544,
+  globalRank: 173804,
+  topPercent: 7,
+  points: 6656,
   stats: [
     {
-      value: "61",
+      value: "69",
       label_fr: "rooms terminées",
       label_en: "completed rooms"
     },
@@ -28,14 +28,14 @@ const TRYHACKME_DATA = {
       label_en: "earned badges"
     },
     {
-      value: "20 jours",
-      value_en: "20 days",
+      value: "21 jours",
+      value_en: "21 days",
       label_fr: "série actuelle",
       label_en: "current streak"
     },
     {
-      value: "20 jours",
-      value_en: "20 days",
+      value: "21 jours",
+      value_en: "21 days",
       label_fr: "meilleure série",
       label_en: "best streak"
     }
